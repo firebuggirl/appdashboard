@@ -1,0 +1,454 @@
+/* Global Layout Set-up */
+* {
+  @include border_box;
+}
+
+
+img{
+  max-width: 100%;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+
+}
+.nav {
+  @include flex;
+  @include flex_column;
+  /*@include flex_align_items--center;*/
+  list-style-type: none;
+  position: fixed;
+  margin: em(-90px) auto;
+  padding: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: darken($medium-purple, 20%);
+  padding-top: em(180px);
+  @include bp(tablet){
+       /*margin: 0 auto;*/
+       padding-top: em(100px);
+       width: 7%;
+       height: 200vh;
+
+  }
+  @include bp(fullscreen){
+    padding-top: em(200px);
+  }
+
+}
+
+ul {
+  /*border-bottom: 1px solid #ccc;*/
+  list-style: none;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+.nav li {
+
+   padding: 3px 10px 10px 5px;
+  @include bp(tablet){
+    padding: 16px 10px 10px 35px;
+    font-size: $font_size__h4;
+  }
+}
+
+li {
+
+  border-bottom: 3px solid $white;
+  border-bottom-style: inset;
+  margin-bottom: em(20px);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(95, 74, 173, 1) 25%,
+    rgba(134, 163, 204, 1) 95%,
+    rgba(169, 186, 211, 1) 95%
+  );
+  background-size: 100% 200%;
+  background-position: top center;
+  /*color: #666;*/
+  /*display: block;
+  text-align: center;
+  text-decoration: none;*/
+  transition: all .25s ease-in-out;
+  &:hover {
+    background-position: bottom center;
+    color: rgba(0,0,0,.75);
+  }
+  & a {
+  /*  color: #666;*/
+    display: block;
+    padding: 1rem 0;
+    transition: all .25s ease-in-out;
+  }
+  @include bp(tablet){
+    border-bottom: none;
+  }
+}
+
+
+.navIcons{
+  height: em(40px);
+}
+.sideNavIcons{
+  height:em(30px);
+  margin-bottom: em(10px);
+  opacity: 0.7;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+#emptyDiv{
+  @include bp(fullscreen){
+  content: " ";
+  height:em(150px);
+  width: 93%;
+}
+@include bp(large_screen){
+  /*height: em(380px);*/
+}
+}
+#wrapper{
+  /*width: 100%;*/
+  height: 100vh;
+  @include bp(tablet){
+/* width:93%;
+  margin-left: 7%;*/
+}
+
+}
+
+section{
+  @include flex;
+  @include flex_column;
+  @include bp(tablet){
+    width: 93%;
+    margin-left: 7%;
+    margin-top: em(100px);
+  }
+  @include bp(fullscreen){
+  margin-top: em(0px);
+  }
+}
+
+/* #toggle_class keeps margin between nav and section flush
+   when nav is toggled on and off with sticky header nav */
+
+#toggle_class{
+  content: "";
+  height: 0px;
+  display: none;
+}
+
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: $sand;
+  &:hover{
+    color: lighten($red, 30%);
+  }
+  &:focus{
+    color: $red;
+  }
+}
+
+
+
+/* Section Styles */
+
+p{
+  color: $white;
+}
+
+.name{
+  font-weight: 300;
+}
+
+
+
+
+
+
+.flexDashBoard{
+  text-align: center;
+  @include bp(tablet){
+  @include flex;
+  @include flex_justify_space_around;
+  @include flex_align_items--center;
+  /*text-align: left;*/
+
+  margin-bottom: em(30px);
+
+}
+
+}
+.flexAlert{
+
+  width: 98%;
+  height: em(40px);
+  margin-left: 1%;
+  @include bp(tablet){
+  /*  @include flex;*/
+
+  }
+  @include bp(fullscreen){
+  /*height: 100vh;*/
+  /*width: 98%;*/
+  /*padding-top: 6.25em;*/
+  /*margin-left: 1%;*/
+
+
+}
+}
+
+
+#alert{
+  @include flex;
+  /*width: 96%;*/
+  background-color: $medium-purple;
+  height: em(40px);
+  display: none;
+  /*margin-left: 1%;*/
+  padding-top: em(13px);
+  @include bp(tablet){
+  /*  width: 98%;*/
+  }
+}
+
+#alertSpan{
+  font-weight: $font-weight--bold;
+  margin-right: em(15px);
+  margin-left: em(10px);
+  /*padding-right: em(10px);
+  padding-left: em(10px);*/
+}
+#close{
+  margin-left: em(160px);
+/*  padding-left: em(5px);*/
+align-self: flex-end;
+  @include bp(tablet){
+      margin-left: em(740px);
+
+  }
+  @include bp(large_screen){
+    margin-left: 80%;
+  }
+}
+
+h3{
+  color: $black;
+  opacity: 0.7;
+  &:hover{
+    opacity: 1;
+  }
+
+}
+input[type="search"] {
+	border: em(3px) solid grey;
+	width: 60%;
+	height: em(40px)inherit;
+	margin-top: em(20px);
+	margin-bottom: em(40px);
+  border-radius: 4%;
+	font-size: 16pt;
+	color: darken($medium-purple, 40%);
+  @include bp(tablet){
+    /*width: 40%;*/
+    margin-top: em(0px);
+    margin-bottom: em(0px);
+    height: em(20px);
+  }
+}
+
+input[type="search"]:focus {
+  border: 8px solid $medium-purple;
+  color: #090303;
+  /*border-color: #c6454e;*/
+  background-color: #C0C0C0; }
+
+
+
+
+#weekly{
+  padding-top: em(20px);
+  text-align: center;
+}
+#trafficTime{
+  @include flex;
+  @include flex_justify_space_between;
+  padding-bottom: em(20px);
+
+}
+.trafficTimeHover:hover{
+  color: $white;
+  background-color: $limeGreen;
+  border-radius: 30%;
+}
+button{
+	border-radius: 40%;
+	height: em(40px);
+	background-color: transparent;
+	border: none;
+  &:hover{
+    background-color: $limeGreen;
+    color: $white;
+  }
+}
+#chart{
+  margin-top: em(100px);
+}
+
+#traffic{
+  @include bp(tablet){
+    margin-bottom: em(80px);
+  }
+}
+
+.trafficTitlesMobileView{
+  display: none;
+  text-align: center;
+}
+
+  .trafficTitlesTabletView{
+  display:none;
+    @include bp(tablet){
+      @include flex;
+      /*@include flex_column;*/
+      @include flex_justify_space_around;
+    margin-top: em(-60px);
+    }
+  }
+
+  #dailyTraffic{
+    @include flex;
+    @include flex_column;
+    @include flex_justify_space_between;
+    /*height: em(500px);*/
+
+    @include bp(tablet){
+
+    @include flex_row;
+    @include flex_justify_space_between;
+    margin-top: em(30px);
+    height: em(250px);
+
+  }
+  }
+
+
+  #barChartDaily, #mobileUsers{
+    @include bp(tablet){
+      max-width: 50%;
+
+    }
+  }
+
+#socialStatH3Div{
+  text-align: center;
+  @include bp(fullscreen){
+    margin-top: 16em;
+    padding-left: em(10px);
+    text-align: left;
+  }
+}
+.socialStats{
+  @include flex;
+  @include flex_column;
+ @include flex_justify_center;
+  @include flex_align_items--center;
+  text-align: center;
+  /*width:98%;*/
+
+  margin-top: 5%;
+  @include bp(fullscreen){
+    @include flex_row;
+    @include flex_justify_space_between;
+  /*  margin-top: 2em;*/
+    /*width: 93%;*/
+  }
+
+}
+
+.innerFlexWrap{
+  @include flex;
+   /*@include flex_justify_center;*/
+   @include flex_align_items--center;
+   background-color: $ivory;
+   /*opacity: 0.8;*/
+  /*@include flex_justify_space_around;*/
+  border: 4px solid $grey;
+  /*flex-basis: 75%;*/
+  width: 96%;
+  margin-bottom: em(50px);
+  &:hover{
+  /*  opacity: 1;*/
+  }
+}
+
+.socialIconDivs{
+  @include flex;
+  @include flex_justify_center;
+  @include flex_align_items--center;
+  border: em(4px) solid $grey;
+  width: em(150px);
+  height: em(150px);
+  background-color: $medium-purple;
+  border-radius: 50%;
+  @include bp(fullscreen){
+    height: em(190px);
+    width: em(190px);
+      margin-right: em(40px);
+  }
+}
+#twitter, #facebook, #google, #linkedIn, #pinterest, #youtube{
+  height: em(75px);
+  fill: $white;
+  @include bp(fullscreen){
+    height: em(130px);
+
+  }
+}
+
+.statText{
+
+}
+
+h4{
+  color: $medium-purple;
+  font-size: $font_size__h1;
+  @include bp(fullscreen){
+    margin-left: em(-25px);
+    margin-bottom: em(-30px);
+  }
+}
+.socialNumbers{
+  font-size: $font-size__subTitle;
+  @include bp(fullscreen){
+    font-size: $font-size__bannerTitle;
+  }
+
+}
+/*.socialText{
+  margin-top: em(-40px);
+  margin-left: em(-220px);
+}*/
+/*.socialWrappers{
+  @include flex;
+
+  @include flex_align_items--center;
+  @include flex_justify_space_around;
+  flex-direction:row-reverse;
+  border: 4px solid $grey;
+  width: 90%;
+  height: em(250px);
+}*/

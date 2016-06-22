@@ -1,0 +1,14 @@
+{
+  "name": "project9webappdashboard",
+  "version": "1.0.0",
+  "description": "Take a mockup and a few icons and build a beautiful, web dashboard complete with JavaScript-driven charts and graphs-",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juliette Tworsey",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^2.1.6"
+  }
+}
