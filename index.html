@@ -65,16 +65,19 @@
 
 
               <div id="trafficTime">
-                <button class="button">Hourly</button>
-                <button class="button">Weekly</button>
-                <button class="button">Daily</button>
-                <button class="button">Monthly</button>
+                <button id="hourlyClick" class="button">Hourly</button>
+                <button id="weeklyClick" class="button">Weekly</button>
+                <button id="dailyClick" class="button">Daily</button>
+                <button id="monthlyClick" class="button">Monthly</button>
 
              </div>
 
 
               <div id="traffic">
+              <canvas id="lineChart-hourly"></canvas>
               <canvas id="lineChart-weekly"></canvas>
+              <canvas id="lineChart-daily"></canvas>
+              <canvas id="lineChart-monthly"></canvas>
               </div>
 
                  <div class="trafficTitlesTabletView">

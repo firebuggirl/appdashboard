@@ -18,9 +18,13 @@
 
     });
 
+    $("#bell").click(function(){
+    alert("The paragraph was clicked.");
+});
 
 
-    $(document).ready(function(){
+
+$(document).ready(function(){
       if(window.innerWidth <= 750){
 $('.trafficTitlesMobileView').show();
       //  $('.trafficTitlesTabletView').hide();
