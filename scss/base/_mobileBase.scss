@@ -24,6 +24,7 @@ body {
   padding: 0;
   width: 100%;
   z-index: 10;
+
   background-color: darken($medium-purple, 20%);
   padding-top: em(180px);
   @include bp(tablet){
@@ -43,14 +44,14 @@ ul {
   /*border-bottom: 1px solid #ccc;*/
   list-style: none;
   margin: 0 0 1.5rem 0;
-  padding: 0;
+  padding: 0px;
 }
 
 .nav li {
 
    padding: 3px 10px 10px 5px;
   @include bp(tablet){
-    padding: 16px 10px 10px 35px;
+   padding-top: em(20px);
     font-size: $font_size__h4;
   }
 }
@@ -59,7 +60,7 @@ li {
 
   border-bottom: 3px solid $white;
   border-bottom-style: inset;
-  margin-bottom: em(20px);
+  margin-bottom: em(0px);
   background-image: linear-gradient(
     to bottom,
     transparent 50%,
@@ -78,12 +79,7 @@ li {
     background-position: bottom center;
     color: rgba(0,0,0,.75);
   }
-  & a {
-  /*  color: #666;*/
-    display: block;
-    padding: 1rem 0;
-    transition: all .25s ease-in-out;
-  }
+
   @include bp(tablet){
     border-bottom: none;
   }
@@ -193,9 +189,8 @@ p{
 
 }
 .flexAlert{
-
   width: 98%;
-  height: em(40px);
+  height: em(60px);
   margin-left: 1%;
   @include bp(tablet){
   /*  @include flex;*/
@@ -227,21 +222,20 @@ p{
 
 #alertSpan{
   font-weight: $font-weight--bold;
-  margin-right: em(15px);
-  margin-left: em(10px);
+  margin-right: em(10px);
+  margin-left: em(5px);
   /*padding-right: em(10px);
   padding-left: em(10px);*/
 }
 #close{
-  margin-left: em(160px);
-/*  padding-left: em(5px);*/
-align-self: flex-end;
+ margin-left: em(20px);
+
   @include bp(tablet){
-      margin-left: em(740px);
+      margin-left: em(400px);
 
   }
   @include bp(large_screen){
-    margin-left: 80%;
+    margin-left: em(860px);
   }
 }
 
@@ -370,7 +364,7 @@ button{
   /*width:98%;*/
 
   margin-top: 5%;
-  @include bp(fullscreen){
+  @include bp(tablet){
     @include flex_row;
     @include flex_justify_space_between;
   /*  margin-top: 2em;*/
@@ -381,17 +375,24 @@ button{
 
 .innerFlexWrap{
   @include flex;
-   /*@include flex_justify_center;*/
+   @include flex_justify_center;
    @include flex_align_items--center;
    background-color: $ivory;
    /*opacity: 0.8;*/
   /*@include flex_justify_space_around;*/
   border: 4px solid $grey;
   /*flex-basis: 75%;*/
-  width: 96%;
+  width: 90%;
+  height: 150px;
   margin-bottom: em(50px);
   &:hover{
   /*  opacity: 1;*/
+  }
+  @include bp(tablet){
+    width: em(270px);
+  }
+  @include bp(fullscreen){
+    width: em(370px);
   }
 }
 
@@ -400,21 +401,21 @@ button{
   @include flex_justify_center;
   @include flex_align_items--center;
   border: em(4px) solid $grey;
-  width: em(150px);
-  height: em(150px);
+  width: em(90px);
+  height: em(90px);
   background-color: $medium-purple;
   border-radius: 50%;
   @include bp(fullscreen){
-    height: em(190px);
-    width: em(190px);
+    height: em(120px);
+    width: em(120px);
       margin-right: em(40px);
   }
 }
 #twitter, #facebook, #google, #linkedIn, #pinterest, #youtube{
-  height: em(75px);
+  height: em(55px);
   fill: $white;
   @include bp(fullscreen){
-    height: em(130px);
+    height: em(70px);
 
   }
 }
@@ -426,6 +427,7 @@ button{
 h4{
   color: $medium-purple;
   font-size: $font_size__h1;
+  margin-bottom: em(-10px);
   @include bp(fullscreen){
     margin-left: em(-25px);
     margin-bottom: em(-30px);
