@@ -11347,11 +11347,15 @@ $('#toggle').click(function () {
 
  $('#toggle_class').toggle("slow");
 
-   $('.flex2').show();
+  
+
+   $('#messages').hide();
 
 
 });
 });
+
+
 
 /* Hide/show toggle as page viewport is resized */
 
@@ -11384,6 +11388,34 @@ var ele = document.getElementsByName("bandmember");
    for(var i=0;i<ele.length;i++)
       ele[i].checked = false;
 
+//var bellclick = document.getElementById("bell");
+//var nav = document.querySelector(".nav");
+
+//bell.addEventListener("click", function(e){
+//  nav.style.display = "block";
+//})
+//
+//
+//
+
+var messages = document.getElementById('messages');
+var bell = document.getElementById('bell');
+
+
+
+  bell.addEventListener("click", function(e){
+    if(messages.style.display = 'none'){
+      messages.style.display = 'block';
+    }
+
+ });
+
+
+
+ messages.addEventListener("click", function(e){
+     messages.style.display = 'none';
+ });
+
 //var alert, close;
 // alert = document.getElementsById("alert");
 // close = document.getElementsById("close");
@@ -11404,9 +11436,7 @@ var ele = document.getElementsByName("bandmember");
 
     });
 
-    $("#bell").click(function(){
-    alert("The paragraph was clicked.");
-});
+  
 
 
 

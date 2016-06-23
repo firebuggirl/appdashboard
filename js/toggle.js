@@ -27,11 +27,15 @@ $('#toggle').click(function () {
 
  $('#toggle_class').toggle("slow");
 
-   $('.flex2').show();
+  
+
+   $('#messages').hide();
 
 
 });
 });
+
+
 
 /* Hide/show toggle as page viewport is resized */
 

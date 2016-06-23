@@ -14,6 +14,56 @@ body {
   background-color: $white;
 
 }
+#messagesText{
+
+}
+#messages{
+  @include flex;
+  @include flex_column;
+  /*@include flex_justify_center;*/
+  text-align: center;
+  /*max-height: 100px;*/
+  width: 100%;
+  height:100vh;
+ padding-top: em(100px);
+ display:none;
+  background-color: $charcoal;
+ position: fixed;
+  z-index: 10;
+  @include bp(tablet){
+
+    margin-top: em(-40px);
+  }
+  @include bp(fullscreen){
+     padding-top: em(160px);
+       height:150vh;
+  }
+
+}
+
+.alertMessages{
+  @include flex;
+  @include flex_justify_center;
+  @include flex_align_items--center;
+  background-color: $white;
+  color:$red;
+  font-size: $font_size__h4;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  width: 90%;
+  height: 20vh;
+  border: 10px solid darken($medium-purple, 20%);
+  opacity: 0.7;
+  border-radius: 4%;
+  &:hover{
+    opacity: 1;
+  }
+  @include bp(tablet){
+    width: 80%;
+    height: 10vh;
+    margin-left: 10%;
+  }
+}
 .nav {
   @include flex;
   @include flex_column;
@@ -189,6 +239,7 @@ p{
 
 }
 .flexAlert{
+ @include flex;
   width: 98%;
   height: em(60px);
   margin-left: 1%;
@@ -213,6 +264,7 @@ p{
   background-color: $medium-purple;
   height: em(40px);
   display: none;
+ width:98%;
   /*margin-left: 1%;*/
   padding-top: em(13px);
   @include bp(tablet){
@@ -230,8 +282,10 @@ p{
 #close{
  margin-left: em(20px);
 
+
+
   @include bp(tablet){
-      margin-left: em(400px);
+      margin-left: em(330px);
 
   }
   @include bp(large_screen){

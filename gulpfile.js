@@ -11,6 +11,7 @@ gulp.task("concatScripts", function() {
         'js/chartstandardbuild.js',
         'js/toggle.js',
         'js/radiobutton.js',
+        'js/bellclick.js',
         'js/alert.js',
         'js/chart.js'])
     .pipe(concat("app.js"))
