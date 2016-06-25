@@ -70,22 +70,24 @@ body {
   /*@include flex_align_items--center;*/
   list-style-type: none;
   position: fixed;
-  margin: em(-90px) auto;
+  margin: em(70px) auto;
   padding: 0;
   width: 100%;
   z-index: 10;
-
   background-color: darken($medium-purple, 20%);
-  padding-top: em(180px);
+  /*padding-top: em(180px);*/
   @include bp(tablet){
-       /*margin: 0 auto;*/
-       padding-top: em(100px);
-       width: 7%;
-       height: 200vh;
+
+     margin-top: em(-40px);
+     padding-top: em(0px);
+     width: 7%;
+     height: 200vh;
 
   }
   @include bp(fullscreen){
-    padding-top: em(200px);
+    margin-top: em(55px);
+    padding-top: em(0px);
+    width: 5%;
   }
 
 }
@@ -102,6 +104,7 @@ ul {
    padding: 3px 10px 10px 5px;
   @include bp(tablet){
    padding-top: em(20px);
+   padding-left: em(7px);
     font-size: $font_size__h4;
   }
 }
@@ -221,10 +224,6 @@ p{
 }
 
 
-
-
-
-
 .flexDashBoard{
   text-align: center;
   @include bp(tablet){
@@ -237,16 +236,7 @@ p{
 
 }
 
-}
-.flexAlert{
- @include flex;
-  width: 98%;
-  height: em(60px);
-  margin-left: 1%;
-  @include bp(tablet){
-  /*  @include flex;*/
 
-  }
   @include bp(fullscreen){
   /*height: 100vh;*/
   /*width: 98%;*/
@@ -256,19 +246,23 @@ p{
 
 }
 }
-
+.flexAlert #alert {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	font-size: 0.825em;
+	font-weight: lighter;
+	margin: 0;
+}
 
 #alert{
   @include flex;
-  /*width: 96%;*/
   background-color: $medium-purple;
   height: em(40px);
   display: none;
  width:98%;
-  /*margin-left: 1%;*/
   padding-top: em(13px);
   @include bp(tablet){
-  /*  width: 98%;*/
   }
 }
 
@@ -280,17 +274,18 @@ p{
   padding-left: em(10px);*/
 }
 #close{
- margin-left: em(20px);
+  /*justify-content: flex-end;*/
+ /*margin-left: em(20px);*/
 
 
 
-  @include bp(tablet){
+/*  @include bp(tablet){
       margin-left: em(330px);
 
   }
   @include bp(large_screen){
     margin-left: em(860px);
-  }
+  }*/
 }
 
 h3{
@@ -302,7 +297,7 @@ h3{
 
 }
 input[type="search"] {
-	border: em(3px) solid grey;
+	border: em(3px) solid $grey;
 	width: 60%;
 	height: em(40px)inherit;
 	margin-top: em(20px);
@@ -402,9 +397,11 @@ button{
   }
 
 #socialStatH3Div{
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   text-align: center;
   @include bp(fullscreen){
-    margin-top: 16em;
+    margin-top: 6em;
     padding-left: em(10px);
     text-align: left;
   }
@@ -429,21 +426,19 @@ button{
 
 .innerFlexWrap{
   @include flex;
-   @include flex_justify_center;
+   @include flex_justify_space_around;
    @include flex_align_items--center;
    background-color: $ivory;
-   /*opacity: 0.8;*/
-  /*@include flex_justify_space_around;*/
   border: 4px solid $grey;
-  /*flex-basis: 75%;*/
-  width: 90%;
-  height: 150px;
+  width: 70%;
+  height: 120px;
   margin-bottom: em(50px);
   &:hover{
   /*  opacity: 1;*/
   }
   @include bp(tablet){
     width: em(270px);
+    height: em(160px);
   }
   @include bp(fullscreen){
     width: em(370px);
@@ -468,11 +463,18 @@ button{
 #twitter, #facebook, #google, #linkedIn, #pinterest, #youtube{
   height: em(55px);
   fill: $white;
+  animation: turn 1.1s .2s ease-out forwards;
+  &:hover{
+    fill: $grey;
+  }
   @include bp(fullscreen){
     height: em(70px);
 
   }
+
 }
+
+
 
 .statText{
 
@@ -494,17 +496,190 @@ h4{
   }
 
 }
-/*.socialText{
-  margin-top: em(-40px);
-  margin-left: em(-220px);
-}*/
-/*.socialWrappers{
+
+
+#membersAndActivity{
+  @include flex;
+  @include flex_column;
+  width: 100%;
+  background-color:lighten($grey, 30%);
+  border: 5px solid $grey;
+  @include bp(tablet){
+    @include flex_row;
+  }
+}
+
+#newMembersDiv, #recentActivity{
+  width: 100%;
+  border: 4px solid $grey;
+  @include bp(tablet){
+    margin-left: 0%;
+  }
+}
+.flexArrows{
+  @include flex;
+  /*@include flex_justify_space_between;*/
+}
+.arrow{
+  height: 40px;
+  fill: $medium-purple;
+}
+
+
+.tableH3{
+  margin-left: 5%;
+}
+table {
+  border-spacing: 0.5rem;
   @include flex;
 
-  @include flex_align_items--center;
-  @include flex_justify_space_around;
-  flex-direction:row-reverse;
-  border: 4px solid $grey;
+
+}
+tbody{
+  @include flex;
+  @include flex_column;
+  /*@include flex_align_items--center;*/
   width: 90%;
-  height: em(250px);
-}*/
+  margin-left: 5%;
+}
+
+td {
+  padding: 0.5rem;
+}
+tr{
+  border-bottom: 3px solid $grey;
+
+}
+
+#rowspan{
+  background-color: $limeGreen;
+
+
+}
+
+tr{
+  margin-bottom: 30px;
+}
+
+.memberPics{
+  height: em(60px);
+  border-radius: 50%;
+  border: 4px solid $medium-purple;
+}
+
+#lastWrapperDiv{
+  @include flex;
+  @include flex_column;
+  @include flex_justify_center;
+  @include flex_align_items--center;
+
+  width: 100%;
+  /*height: 400px;*/
+  background-color:lighten($black, 30%);
+  border: 5px solid $grey;
+  @include bp(tablet){
+    @include flex_row;
+  }
+}
+
+#messageUser{
+
+  border-color: 5px solid $red;
+  width: 90%;
+  margin-left: 5%;
+/*  height: 300px;*/
+  border: 4px solid $red;
+  @include bp(tablet){
+    margin-left: 0%;
+  }
+}
+
+#settings{
+  width: 90%;
+  margin-left: 5%;
+/*  height: 300px;*/
+  border: 4px solid $red;
+  @include bp(tablet){
+    margin-left: 0%;
+
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+#settingsForm{
+
+}
+
+#searchMessages{
+  width: 95%;
+  height: em(35px);
+  margin-bottom: em(20px);
+
+}
+
+textarea{
+  width: 95%;
+  border: em(3px) solid $grey;
+  color: $limeGreen;
+  border-radius: 4%;
+	font-size: 16pt;
+	color: darken($medium-purple, 40%);
+  @include bp(tablet){
+    /*width: 40%;*/
+    margin-top: em(0px);
+    margin-bottom: em(0px);
+
+  }
+
+
+}
+
+textarea:focus {
+  border: 8px solid $medium-purple;
+  color: #090303;
+  /*border-color: #c6454e;*/
+  background-color: #C0C0C0;
+}
+
+#public{
+  @include flex;
+  @include flex_column;
+}
+
+#messageButton{
+  width: 100%;
+  border-radius: 4%;
+  color: $white;
+  background-color: $medium-purple;
+}
+
+#submitButton{
+  color: $white;
+  background-color: $medium-purple;
+  width: 100%;
+  border-radius: 4%;
+  margin-bottom: 2%;
+  @include bp(tablet){
+    width: 45%;
+  }
+}
+
+#cancelButton{
+  color: $white;
+  background-color: $grey;
+  width: 100%;
+  border-radius: 4%;
+  @include bp(tablet){
+    width: 45%;
+  }
+}
+
+#settingButtons{
+  @include bp(tablet){
+    @include flex;
+    @include flex_justify_space_around;
+  }
+}

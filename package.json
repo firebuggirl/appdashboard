@@ -9,6 +9,7 @@
   "author": "Juliette Tworsey",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^2.1.6"
+    "chart.js": "^2.1.6",
+    "css-toggle-switch": "^4.0.2"
   }
 }
