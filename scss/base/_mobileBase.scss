@@ -499,14 +499,15 @@ h4{
 }
 
 #newMembersDiv, #recentActivity{
-  width: 100%;
+/*  width: 100%;*/
   border: 4px solid $grey;
   @include bp(tablet){
     margin-left: 0%;
+    width: 50%;
   }
 }
 .flexArrows{
-  @include flex;
+  /*@include flex;*/
   /*@include flex_justify_space_between;*/
 }
 .arrow{
@@ -520,24 +521,26 @@ h4{
 }
 table {
   border-spacing: 0.5rem;
-  @include flex;
+  width:100%;
+/*  @include flex;*/
 
 
 }
 tbody{
-  @include flex;
-  @include flex_column;
-  /*@include flex_align_items--center;*/
-  width: 90%;
-  margin-left: 5%;
+/*  @include flex;
+  @include flex_column;*/
+
+  /*width: 100%;*/
+  /*margin-left: 5%;*/
 }
 
 td {
+
   padding: 0.5rem;
 }
 tr{
   border-bottom: 3px solid $grey;
-
+  margin-bottom: 30px;
 }
 
 #rowspan{
@@ -546,9 +549,6 @@ tr{
 
 }
 
-tr{
-  margin-bottom: 30px;
-}
 
 .memberPics{
   height: em(60px);
