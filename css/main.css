@@ -605,7 +605,7 @@ p {
       /*margin-left: 1%;*/ } }
 
 .flexAlert #alert {
-  display: flex;
+  display: block;
   align-items: center;
   padding: 10px 20px;
   font-size: 0.825em;
@@ -629,15 +629,7 @@ p {
   padding-left: em(10px);*/ }
 
 #close {
-  /*justify-content: flex-end;*/
-  /*margin-left: em(20px);*/
-  /*  @include bp(tablet){
-        margin-left: em(330px);
-  
-    }
-    @include bp(large_screen){
-      margin-left: em(860px);
-    }*/ }
+  float: right; }
 
 h3 {
   color: #000;
