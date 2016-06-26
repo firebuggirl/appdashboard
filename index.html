@@ -443,6 +443,7 @@
 
               <fieldset class="form" id="messageFieldset">
               <legend>Message User</legend>
+              <label for="searchMessages"></label>
                <input type="search" id="searchMessages" name="searchMessages" placeholder="Search for User" autocomplete="on" ><span class="error"><p id="user_error"></p></span>
                <textarea id="comment" rows="6" cols="42" name="comment" placeholder="Message for User" ></textarea><span class="error"><p id="message_error"></p></span>
            </fieldset>
@@ -456,6 +457,8 @@
 
             </form>
 
+
+
        </div>
 
            <div id="settings">
@@ -468,7 +471,7 @@
                <div>
                <label class="switch-ios switch-light input:checked ~ span" onclick="">
                    <p class="publicParagraph">Send Email Notifications</p>
-                  <input type="checkbox">
+                  <input name="checkbox" id="checkbox" class="stored" type="checkbox">
 
                      <span>
                        <span>Off</span>
