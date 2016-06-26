@@ -5,7 +5,7 @@ document.getElementById("messageUserValidate").onsubmit = function () {
     var submit = true;
 
     if (x == null || x == "") {
-        nameError = "Please enter the name of the user that you would like to conect with!";
+        nameError = "Please enter the name of the user that you would like to connect with!";
         document.getElementById("user_error").innerHTML = nameError;
         submit = false;
     }
