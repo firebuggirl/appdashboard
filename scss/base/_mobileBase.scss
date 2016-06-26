@@ -64,6 +64,10 @@ body {
     margin-left: 10%;
   }
 }
+
+#friend, #group, #password{
+  height: em(40px);
+}
 .nav {
   @include flex;
   @include flex_column;
@@ -180,9 +184,10 @@ section{
   @include flex;
   @include flex_column;
   @include bp(tablet){
-    width: 93%;
-    margin-left: 7%;
+    width: 95%;
+    margin-left: 5%;
     margin-top: em(100px);
+
   }
   @include bp(fullscreen){
   margin-top: em(0px);
@@ -232,7 +237,7 @@ p{
   @include flex_align_items--center;
   /*text-align: left;*/
 
-  margin-bottom: em(30px);
+  margin-bottom: em(60px);
 
 }
 
@@ -390,7 +395,7 @@ button{
   margin-bottom: 1.5em;
   text-align: center;
   @include bp(fullscreen){
-    margin-top: 6em;
+    margin-top: 12em;
     padding-left: em(10px);
     text-align: left;
   }
@@ -406,7 +411,7 @@ button{
   margin-top: 5%;
   @include bp(tablet){
     @include flex_row;
-    @include flex_justify_space_between;
+    @include flex_justify_space_around;
   /*  margin-top: 2em;*/
     /*width: 93%;*/
   }
@@ -492,7 +497,7 @@ h4{
   @include flex_column;
   width: 100%;
   background-color:lighten($grey, 30%);
-  border: 5px solid $grey;
+  border: 2px solid $grey;
   @include bp(tablet){
     @include flex_row;
   }
@@ -500,7 +505,7 @@ h4{
 
 #newMembersDiv, #recentActivity{
 /*  width: 100%;*/
-  border: 4px solid $grey;
+  border: 2px solid $grey;
   @include bp(tablet){
     margin-left: 0%;
     width: 50%;
@@ -561,33 +566,35 @@ tr{
   @include flex_column;
   @include flex_justify_center;
   @include flex_align_items--center;
-
+  padding-bottom: em(30px);
   width: 100%;
   /*height: 400px;*/
-  background-color:lighten($black, 30%);
-  border: 5px solid $grey;
+  background-color:lighten($grey, 30%);
+  /*border: 5px solid $grey;*/
   @include bp(tablet){
     @include flex_row;
   }
 }
 
 #messageUser{
-
-  border-color: 5px solid $red;
   width: 90%;
   margin-left: 5%;
 /*  height: 300px;*/
-  border: 4px solid $red;
+  border: 1px solid $grey;
   @include bp(tablet){
     margin-left: 0%;
   }
+}
+#user_error, #message_error{
+  color:red;
+  font-size: $font_size__h4;
 }
 
 #settings{
   width: 90%;
   margin-left: 5%;
 /*  height: 300px;*/
-  border: 4px solid $red;
+    border: 1px solid $grey;
   @include bp(tablet){
     margin-left: 0%;
 
@@ -598,6 +605,14 @@ fieldset {
   border: none;
 }
 
+legend{
+  color: $black;
+  opacity: 0.7;
+  font-size: $font_size__h5;
+  &:hover{
+    opacity: 1;
+  }
+}
 #settingsForm{
 
 }
@@ -626,7 +641,7 @@ textarea{
 
 }
 
-textarea:focus {
+textarea:focus, #timezone:focus {
   border: 8px solid $medium-purple;
   color: #090303;
   /*border-color: #c6454e;*/
@@ -636,6 +651,10 @@ textarea:focus {
 #public{
   @include flex;
   @include flex_column;
+
+}
+.publicParagraph{
+  color: $black;
 }
 
 #messageButton{
@@ -656,6 +675,14 @@ textarea:focus {
   }
 }
 
+#timezone{
+  height: em(60px);
+  width: 100%;
+  border: em(3px) solid $grey;
+}
+#timeZoneLabel{
+  display: none;
+}
 #cancelButton{
   color: $white;
   background-color: $grey;

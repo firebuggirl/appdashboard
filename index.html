@@ -53,9 +53,41 @@
        <section>
             <div id="messages">
                <h1 id="messagesText">New Messages!</h1>
-                <div class="alertMessages">You have a new friend request!</div>
-                <div class="alertMessages">There are new members to this group!</div>
-                <div class="alertMessages" >Notice: Please change your password for enhanced security!</div>
+                <div class="alertMessages">You have a new friend request!
+                <span>
+                  <svg id="friend" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                    <g><path fill-rule="evenodd" clip-rule="evenodd" fill="#000000" d="M6.188,1.523h14.557v9.277c-1.946,1.232-3.433,3.074-4.253,5.229   H6.188V1.523L6.188,1.523z M12.185,2.857v4.666H7.573v2.512h4.612v4.662h2.563v-4.662h4.613V7.523h-4.613V2.857H12.185z">
+                    </path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#000000" d="M26.943,10.125c5.672,0,10.221,4.543,10.221,10.17   c0,5.623-4.549,10.219-10.221,10.219c-5.624,0-10.172-4.596-10.172-10.219C16.771,14.668,21.32,10.125,26.943,10.125L26.943,10.125   z M18.592,29.717c-4.409,0-8.047,3.639-8.047,8.047v10.713h33.267V37.764c0-4.408-3.588-8.047-8.049-8.047h-2.1   c-1.898,1.436-4.256,2.307-6.816,2.307c-2.565,0-4.923-0.871-6.768-2.307H18.592z">
+                    </path>
+                    </g></svg>
+                </span>
+              </div>
+                <div class="alertMessages">There are new members to this group!
+                <span>
+                  <svg id="group" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                  <g>
+                    <path d="M9,9c0-1.7,1.3-3,3-3s3,1.3,3,3c0,1.7-1.3,3-3,3S9,10.7,9,9z M12,14c-4.6,0-6,3.3-6,3.3V19h12v-1.7C18,17.3,16.6,14,12,14z"></path>
+                  </g>
+                  <g><g>
+                  <circle cx="18.5" cy="8.5" r="2.5"></circle>
+                  </g>
+                  <g>
+                  <path d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"></path>
+                  </g></g>
+                  <g><g><circle cx="18.5" cy="8.5" r="2.5"></circle>
+                  </g><g><path d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"></path></g></g>
+                  <g><g><circle cx="5.5" cy="8.5" r="2.5"></circle></g>
+                  <g><path d="M5.5,13c1.2,0,2.1,0.3,2.8,0.8c-2.3,1.1-3.2,3-3.2,3.2l0,0.1H1v-1.3C1,15.7,2.1,13,5.5,13z"></path>
+                  </g></g></svg>
+                </span>
+                </div>
+                <div class="alertMessages" >Notice: Please change your password for enhanced security!
+                  <span>
+                    <svg id="password" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M89.6,37.5H47.9c0.1-3.2-0.3-13.2-6.5-19.9c-3.7-4-8.8-6.1-15.1-6.1c-6.3,0-11.3,2-15.1,6.1C6.8,22.4,5.4,29.1,5,33.5  c-0.2,2.1,1.5,3.9,3.6,3.9c1.9,0,3.4-1.4,3.6-3.3c0.3-3.4,1.3-8.4,4.4-11.7c2.3-2.5,5.5-3.7,9.7-3.7c4.2,0,7.4,1.2,9.7,3.7  c4.5,4.8,4.6,12.9,4.6,15h-5.2c-3,0-5.4,2.4-5.4,5.4v40.2c0,3,2.4,5.4,5.4,5.4h54.1c3,0,5.4-2.4,5.4-5.4V42.9  C95,39.9,92.6,37.5,89.6,37.5z M68.5,73.7h-5.4h-1h-5.4l2.6-11.3c-1.9-1.1-3.1-3.2-3.1-5.5c0-3.5,2.9-6.4,6.4-6.4  c3.5,0,6.4,2.9,6.4,6.4c0,2.3-1.3,4.4-3.1,5.5L68.5,73.7z"></path>
+                    </svg>
+                  </span>
+                </div>
             </div>
 
              <div id="emptyDiv"></div>
@@ -407,17 +439,17 @@
 <div id="lastWrapperDiv">
       <div id="messageUser">
 
-            <form action="index.html" method="POST" onsubmit="return checkForm(this);">
+            <form id="messageUserValidate" action="index.html" method="POST" onsubmit="return checkForm(this);" >
 
               <fieldset class="form" id="messageFieldset">
               <legend>Message User</legend>
-               <input type="search" id="searchMessages" name="searchMessages" placeholder="Search for User" autocomplete="name">
-               <textarea rows="6" cols="42" name="comment" placeholder="Message for User"></textarea>
+               <input type="search" id="searchMessages" name="searchMessages" placeholder="Search for User" autocomplete="on" ><span class="error"><p id="user_error"></p></span>
+               <textarea id="comment" rows="6" cols="42" name="comment" placeholder="Message for User" ></textarea><span class="error"><p id="message_error"></p></span>
            </fieldset>
 
 
             <fieldset class="form" id="signup">
-              <legend>Send</legend>
+
               <button id="messageButton" type="submit">Send</button>
 
             </fieldset>
@@ -432,34 +464,33 @@
                <fieldset class="form" id="settingsFieldset1">
                <legend>Settings</legend>
 
-               <span><p>Send Email Notifications</p>
-                 <label class="switch-ios switch-light input:checked ~ span" onclick="">
+
+               <div>
+               <label class="switch-ios switch-light input:checked ~ span" onclick="">
+                   <p class="publicParagraph">Send Email Notifications</p>
                   <input type="checkbox">
 
-                  <strong>
-                    Wireless
-                  </strong>
-
-                  <span>
-                  <span>Off</span>
-                  <span>On</span>
+                     <span>
+                       <span>Off</span>
+                       <span>On</span>
                       <a></a>
                     </span>
                   </label>
 
-               </span>
+
+                </div>
 
 
 
 
-               <div id="public"><p>Set Profile To Public</p>
+
+
+               <div id="public"><p class="publicParagraph">Set Profile To Public</p>
 
                  <label class="switch-ios switch-light input:checked ~ span " onclick="">
                   <input type="checkbox">
 
-                  <strong>
-                    Wireless
-                  </strong>
+
 
                   <span>
                   <span>Off</span>
@@ -476,10 +507,10 @@
 
 
 
-               <label for="timezone">Timezone</label><br>
+               <label id="timeZoneLabel" for="timezone">Timezone</label><br>
 
                 <select name="timezone" id="timezone">
-
+                      <option value="Select Timezone">Select Timezone</option>
                       <option value="Hawaii">(GMT-10:00) Hawaii</option>
                       <option value="Alaska">(GMT-09:00) Alaska</option>
                       <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>

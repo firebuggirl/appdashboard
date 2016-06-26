@@ -14,11 +14,13 @@
 
      $('#alert').hide();
 
+     $('#weekly').css("margin-top", "-50px");
+
 
 
     });
 
-  
+
 
 
 
