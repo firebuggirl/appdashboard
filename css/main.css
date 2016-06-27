@@ -446,7 +446,7 @@ body {
   -moz-align-items: center;
   background-color: #fff;
   color: #cc0a0a;
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 5%;
   margin-bottom: 5%;
   width: 90%;
@@ -460,7 +460,8 @@ body {
     .alertMessages {
       width: 80%;
       /*  height: 10vh;*/
-      margin-left: 10%; } }
+      margin-left: 10%;
+      font-size: 24px; } }
 
 #friend, #group, #password {
   height: 2.5em;
