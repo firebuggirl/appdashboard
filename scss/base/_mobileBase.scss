@@ -476,9 +476,7 @@ button{
   height: em(55px);
   fill: $white;
   animation: turn 1.1s .2s ease-out forwards;
-  &:hover{
-    fill: $grey;
-  }
+  
   @include bp(fullscreen){
     height: em(70px);
 
@@ -597,8 +595,9 @@ tr{
 #messageUser{
   width: 90%;
   margin-left: 5%;
+
 /*  height: 300px;*/
-  border: 1px solid $grey;
+  border-right: 1px solid $grey;
   @include bp(tablet){
     margin-left: 0%;
   }
@@ -706,11 +705,18 @@ textarea:focus, #timezone:focus {
 
 #settingsFieldset1 > legend:nth-child(1){
 /*  margin-top: em(-90px);*/
+margin-top: em(30px);
 margin-bottom: em(5px);
+@include bp(tablet){
+  margin-top: em(0px);
+}
 }
 .switchSpans{
-  margin-left: 40%;
+  margin-left: 60%;
   margin-top: em(-40px);
+  @include bp(fullscreen){
+    margin-left: 33%;
+  }
 }
 
 #timezone{
