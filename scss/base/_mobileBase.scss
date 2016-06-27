@@ -201,6 +201,7 @@ section{
   @include bp(tablet){
     width: 95%;
     margin-left: 5%;
+    
     margin-top: em(100px);
 
   }
@@ -476,7 +477,7 @@ button{
   height: em(55px);
   fill: $white;
   animation: turn 1.1s .2s ease-out forwards;
-  
+
   @include bp(fullscreen){
     height: em(70px);
 
@@ -536,6 +537,10 @@ h4{
   fill: $medium-purple;
 }
 
+tr.flexArrows:nth-child(4){
+  border-bottom: 0px;
+}
+
 
 .tableH3{
   margin-left: 5%;
@@ -562,6 +567,9 @@ td {
 tr{
   border-bottom: 3px solid $grey;
   margin-bottom: 30px;
+}
+#table > tbody:nth-child(1) > tr:nth-child(4){
+  border-bottom: 0px;
 }
 
 #rowspan{
@@ -594,12 +602,13 @@ tr{
 
 #messageUser{
   width: 90%;
-  margin-left: 5%;
+  /*margin-left: 5%;*/
 
 /*  height: 300px;*/
-  border-right: 1px solid $grey;
+
   @include bp(tablet){
     margin-left: 0%;
+    border-right: 3px solid $grey;
   }
 }
 #user_error, #message_error{
@@ -609,7 +618,7 @@ tr{
 
 #settings{
   width: 90%;
-  margin-left: 5%;
+  /*margin-left: 5%;*/
   margin-top: em(-10px);
 
   /*  border: 1px solid $grey;*/
@@ -652,14 +661,17 @@ legend{
 }
 
 #searchMessages{
-  width: 95%;
+  width: 100%;
   height: em(35px);
   margin-bottom: em(20px);
+  @include bp(tablet){
+    width: 98%;
+  }
 
 }
 
 textarea{
-  width: 95%;
+  width: 100%;
 
   border: em(3px) solid $grey;
   background-color: $medium-purple;
