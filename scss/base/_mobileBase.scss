@@ -610,11 +610,20 @@ tr{
 #settings{
   width: 90%;
   margin-left: 5%;
-    border: 1px solid $grey;
+  margin-top: em(-10px);
+
+  /*  border: 1px solid $grey;*/
   @include bp(tablet){
     margin-left: 0%;
 
   }
+}
+
+#settingsFieldset1 > div:nth-child(2){
+
+	margin-top: em(-10px);
+	margin-bottom: em(30px);
+
 }
 
 #public{
@@ -694,12 +703,23 @@ textarea:focus, #timezone:focus {
   }
 }
 
+#settingsFieldset1 > legend:nth-child(1){
+/*  margin-top: em(-90px);*/
+margin-bottom: em(5px);
+}
+.switchSpans{
+  margin-left: 40%;
+  margin-top: em(-40px);
+}
+
 #timezone{
   height: em(60px);
   width: 100%;
   border: em(3px) solid $grey;
   background-color: $medium-purple;
   color: $white;
+  margin-top: em(35px);
+  margin-bottom: em(50px);
 }
 #timeZoneLabel{
   display: none;

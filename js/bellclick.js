@@ -19,14 +19,17 @@ var messageText = document.getElementById('messagesText');
 
  alertMessage1.addEventListener("click", function(e){
      message1.style.display = 'none';
+    messages.style.display = 'none';
  });
 
  alertMessage2.addEventListener("click", function(e){
      message2.style.display = 'none';
+     messages.style.display = 'none';
  });
 
  alertMessage3.addEventListener("click", function(e){
      message3.style.display = 'none';
+     messages.style.display = 'none';
  });
 
 

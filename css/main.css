@@ -928,10 +928,15 @@ tr {
 #settings {
   width: 90%;
   margin-left: 5%;
-  border: 1px solid #878787; }
+  margin-top: -0.625em;
+  /*  border: 1px solid $grey;*/ }
   @media (min-width: 768px) {
     #settings {
       margin-left: 0%; } }
+
+#settingsFieldset1 > div:nth-child(2) {
+  margin-top: -0.625em;
+  margin-bottom: 1.875em; }
 
 #public {
   display: flex;
@@ -992,12 +997,22 @@ textarea:focus, #timezone:focus {
     #submitButton {
       width: 45%; } }
 
+#settingsFieldset1 > legend:nth-child(1) {
+  /*  margin-top: em(-90px);*/
+  margin-bottom: 0.3125em; }
+
+.switchSpans {
+  margin-left: 40%;
+  margin-top: -2.5em; }
+
 #timezone {
   height: 3.75em;
   width: 100%;
   border: 0.1875em solid #878787;
   background-color: #796FC6;
-  color: #fff; }
+  color: #fff;
+  margin-top: 2.1875em;
+  margin-bottom: 3.125em; }
 
 #timeZoneLabel {
   display: none; }
