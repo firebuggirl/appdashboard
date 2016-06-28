@@ -1,3 +1,6 @@
+
+
+
 document.getElementById("messageUserValidate").onsubmit = function () {
     var x = document.forms["messageUserValidate"]["searchMessages"].value;
     var y = document.forms["messageUserValidate"]["comment"].value;
@@ -27,3 +30,24 @@ function removeWarning() {
 
 document.getElementById("searchMessages").onkeyup = removeWarning;
 document.getElementById("comment").onkeyup = removeWarning;
+////
+var send = document.getElementById("messageButton");
+
+var confirmation = document.getElementById("messageUser");
+
+//var showDiv = document.getElementById("overlay");
+
+//var overlay = ("<div id="overlay"></div>");
+
+send.addEventListener('click', function(e){
+
+
+  messageSent = "Your message has been sent!";
+
+
+  //alert(messageSent);
+//  send.innerHTML = messageSent;
+
+
+
+});

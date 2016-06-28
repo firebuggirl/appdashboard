@@ -12,6 +12,7 @@ gulp.task("concatScripts", function() {
         'js/name-autocomplete.js',
         'js/search.js',
         'js/nav.js',
+        'js/messagesent.js',
         'js/chartstandardbuild.js',
         'js/toggle.js',
         'js/radiobutton.js',

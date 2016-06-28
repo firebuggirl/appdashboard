@@ -1490,32 +1490,81 @@ var membersNav = document.getElementById('membersClick');
 var visitsNav = document.getElementById('visitsClick');
 var settingsNav = document.getElementById('settingsClick');
 
+var mq = window.matchMedia( "(max-width: 750px)" );
 
 dashboardNav.addEventListener("click", function(e){
-
+ if (mq.matches) {
     nav.style.display = 'none';
-
+ }
 
 });
 
 membersNav.addEventListener("click", function(e){
-
+    if (mq.matches) {
     nav.style.display = 'none';
 
-
+ }
 });
 
 visitsNav.addEventListener("click", function(e){
-
+  if (mq.matches) {
     nav.style.display = 'none';
-
+  }
 
 });
 
 settingsNav.addEventListener("click", function(e){
-
+  if (mq.matches) {
     nav.style.display = 'none';
 
+ }
+});
+
+//hide arrows on page load
+$(document).ready(function () {
+  //  $("#bio").hide();//hide arrows div on page load
+  //  $("iframe").hide();//hide iframe on page load
+  $overlay.hide();
+});
+
+
+//Solution: Create an overlay with the large image - Lightbox
+
+var $overlay = $('<div id="overlay"></div>');
+var $messageSent = $("#messageSent");
+//var $caption = $("<p></p>");
+
+//An message to overlay
+$overlay.append($messageSent);
+
+
+//Add overlay
+$("body").append($overlay);
+
+//Capture the click event on a send button
+$("#messageButton").click(function (event) {
+    event.preventDefault();//prevent default browser behavior
+
+    $("header").hide();
+  //Show the overlay.
+    $overlay.show();
+
+    $messageSent.show();
+
+    $('.main-nav ul li').hide();
+    $('#wrapper').hide();
+
+
+});
+
+//When close button is clicked hide the overlay, re-introduce elements
+
+
+$("#closeOverlay").click(function () {
+
+    $overlay.hide();
+    $("header").show();
+    $('#wrapper').show();
 
 });
 
@@ -11456,7 +11505,7 @@ $('#toggle').click(function () {
 
  $('#toggle_class').toggle("slow");
 
-  
+
 
    $('#messages').hide();
 
@@ -11488,6 +11537,10 @@ $(window).resize(function(){
 	}
 });
 
+//////////////////
+//////////////////
+////////////////////
+
 
 
 //Prevent more than one readio button from being selected
@@ -11518,17 +11571,17 @@ var messageText = document.getElementById('messagesText');
 
  alertMessage1.addEventListener("click", function(e){
      message1.style.display = 'none';
-       messages.style.display = 'none';
+    messages.style.display = 'none';
  });
 
  alertMessage2.addEventListener("click", function(e){
      message2.style.display = 'none';
-      messages.style.display = 'none';
+     messages.style.display = 'none';
  });
 
  alertMessage3.addEventListener("click", function(e){
      message3.style.display = 'none';
-      messages.style.display = 'none';
+     messages.style.display = 'none';
  });
 
 
@@ -11541,6 +11594,9 @@ var messageText = document.getElementById('messagesText');
   }
 
 });
+
+
+
 
 document.getElementById("messageUserValidate").onsubmit = function () {
     var x = document.forms["messageUserValidate"]["searchMessages"].value;
@@ -11571,6 +11627,27 @@ function removeWarning() {
 
 document.getElementById("searchMessages").onkeyup = removeWarning;
 document.getElementById("comment").onkeyup = removeWarning;
+////
+var send = document.getElementById("messageButton");
+
+var confirmation = document.getElementById("messageUser");
+
+//var showDiv = document.getElementById("overlay");
+
+//var overlay = ("<div id="overlay"></div>");
+
+send.addEventListener('click', function(e){
+
+
+  messageSent = "Your message has been sent!";
+
+
+  //alert(messageSent);
+//  send.innerHTML = messageSent;
+
+
+
+});
 
 $(document).ready(function () {
     function init() { /* checks for stored data and fills in... */
@@ -11588,6 +11665,72 @@ $('.stored').keyup(function () { /* keyup runs when key is pressed in a form wit
 
 $('#settingsForm').submit(function() { /* currently resets all LS data*/
     localStorage.clear();
+});
+
+$(function () {
+    var data = localStorage.getItem("stored");
+
+    if (data !== null) {
+        $("input[name='checkbox']").attr("checked", "checked");
+    }
+
+
+});
+
+//////////////////////////////////
+///2nd version trying to get local storage of settings
+$(document).ready(function () {
+  /*
+   * check browser supports local storage
+   */
+  if (localStorage) {
+    /*
+     * if form field values exist in local storage use
+     * them to populate the form when the page loads
+     */
+    if (localStorage.type) {
+      $("#checkbox").find("option[value=" + localStorage.type + "]").attr("selected", true);
+    }
+    if (localStorage.name) {
+      $("#checkbox").val(localStorage.name);
+    }
+  //  if (localStorage.email) {
+//      $("#email").val(localStorage.email);
+  //  }
+//    if (localStorage.message) {
+//      $("#message").val(localStorage.message);
+//    }
+    if (localStorage.subscribe === "checked") {
+      $("#checkbox").attr("checked", "checked");
+    }
+
+    /*
+     * when a form field changes store it's value in local storage
+     */
+    //$("input[type=text],select,textarea").change(function(){
+  //    $this = $(this);
+  //    localStorage[$this.attr("name")] = $this.val();
+  //  });
+    $("input[type=checkbox]").change(function(){
+      $this = $(this);
+      localStorage[$this.attr("name")] = $this.attr("checked");
+    });
+
+    $("form")
+      /*
+       * clear local storage when the form is submitted
+       */
+    //  .submit(function(){
+    //    localStorage.clear();
+    //  })
+      /*
+       * output local storage to the console each time the form changes
+       * (you may want to remove this code on the production server)
+       */
+      .change(function(){
+        console.log(localStorage);
+      });
+  }
 });
 
 //var alert, close;

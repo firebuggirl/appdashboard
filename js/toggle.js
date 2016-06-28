@@ -27,7 +27,7 @@ $('#toggle').click(function () {
 
  $('#toggle_class').toggle("slow");
 
-  
+
 
    $('#messages').hide();
 
@@ -58,3 +58,7 @@ $(window).resize(function(){
           $('#name').hide();
 	}
 });
+
+//////////////////
+//////////////////
+////////////////////
