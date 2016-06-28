@@ -1,5 +1,5 @@
 
-
+/* Note: messageUserValidate is the ID of the form element*/
 
 document.getElementById("messageUserValidate").onsubmit = function () {
     var x = document.forms["messageUserValidate"]["searchMessages"].value;
@@ -22,6 +22,10 @@ document.getElementById("messageUserValidate").onsubmit = function () {
 
 
     return submit;
+
+
+
+
 }
 
 function removeWarning() {
@@ -31,23 +35,23 @@ function removeWarning() {
 document.getElementById("searchMessages").onkeyup = removeWarning;
 document.getElementById("comment").onkeyup = removeWarning;
 ////
-var send = document.getElementById("messageButton");
+/////////
+///
+///
+//var send = document.getElementById("messageButton");
 
-var confirmation = document.getElementById("messageUser");
-
-//var showDiv = document.getElementById("overlay");
-
-//var overlay = ("<div id="overlay"></div>");
-
-send.addEventListener('click', function(e){
-
-
-  messageSent = "Your message has been sent!";
-
-
-  //alert(messageSent);
-//  send.innerHTML = messageSent;
+//var confirmation = document.getElementById("messageUser");
 
 
 
-});
+//send.addEventListener('click', function(e){
+
+
+//  messageSent = "Your message has been sent!";
+
+
+
+
+
+
+//});

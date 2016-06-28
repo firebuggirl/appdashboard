@@ -19,8 +19,14 @@ $overlay.append($messageSent);
 //Add overlay
 $("body").append($overlay);
 
+
+
 //Capture the click event on a send button
 $("#messageButton").click(function (event) {
+
+  if (document.getElementById("searchMessages").value === "") {
+      $("#user_error").text("Please Enter Message");
+  } else{
     event.preventDefault();//prevent default browser behavior
 
     $("header").hide();
@@ -32,7 +38,7 @@ $("#messageButton").click(function (event) {
     $('.main-nav ul li').hide();
     $('#wrapper').hide();
 
-
+ }
 });
 
 //When close button is clicked hide the overlay, re-introduce elements
