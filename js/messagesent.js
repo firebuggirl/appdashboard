@@ -25,7 +25,7 @@ $("body").append($overlay);
 $("#messageButton").click(function (event) {
 
   if (document.getElementById("searchMessages").value === "") {
-      $("#user_error").text("Please Enter Message");
+      $("#user_error").text("Please enter the name of the user that you would like to connect with!");
   } else{
     event.preventDefault();//prevent default browser behavior
 
