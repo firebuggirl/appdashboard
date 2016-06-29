@@ -1,3 +1,8 @@
+/* Notes: "#checkbox" represents the first checkbox in the settings form.
+"#settingsForm" represents the form itself, "checkbox2" represents the 2nd checkbox
+and "#timezone represents the select dropdown"*/
+
+
 $(document).ready(function () {
     function init() { /* checks for stored data and fills in... */
         if (localStorage["checkbox"]) {
