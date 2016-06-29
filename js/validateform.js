@@ -1,5 +1,5 @@
 
-/* Note: messageUserValidate is the ID of the form element*/
+/* Note: messageUserValidate is the ID of the form element and "searchMessages" & "comment" IDs are for the input fields in the Message User Form*/
 
 document.getElementById("messageUserValidate").onsubmit = function () {
     var x = document.forms["messageUserValidate"]["searchMessages"].value;
@@ -36,22 +36,3 @@ document.getElementById("searchMessages").onkeyup = removeWarning;
 document.getElementById("comment").onkeyup = removeWarning;
 ////
 /////////
-///
-///
-//var send = document.getElementById("messageButton");
-
-//var confirmation = document.getElementById("messageUser");
-
-
-
-//send.addEventListener('click', function(e){
-
-
-//  messageSent = "Your message has been sent!";
-
-
-
-
-
-
-//});
