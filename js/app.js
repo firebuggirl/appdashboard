@@ -11642,88 +11642,39 @@ $("#closeOverlay").click(function () {
 
 });
 
-$(document).ready(function () {
-    function init() { /* checks for stored data and fills in... */
-        if (localStorage["checkbox"]) {
-            $('#checkbox').val(localStorage["checkbox"]);
-        }
 
-    }
-    init();
+
+$(document).ready(function() {
+    $(window).unload(saveSettings);
+    loadSettings();
 });
 
-$('.stored').keyup(function () { /* keyup runs when key is pressed in a form with "stored"... Write to LS */
-    localStorage[$(this).attr('name')] = $(this).val();
+$('#submitButton').click(function() { /* currently resets all LS data*/
+  localStorage.timezone = $("#timezone").val();
+  //localStorage.checkbox = $('input[type=radio]:checked').val();
+  //localStorage.checkbox2 = $('input[type=radio]:checked').val();
+  localStorage.checkbox = $('#checkbox').val();
+  localStorage.checkbox2 = $('#checkbox2').val();
 });
 
-$('#settingsForm').submit(function() { /* currently resets all LS data*/
+function loadSettings() {
+
+    $('input[value="' + localStorage.checkbox + '"]').prop('checked', true);
+      $('input[value="' + localStorage.checkbox2 + '"]').prop('checked', true);
+    $("#timezone").val(localStorage.timezone);
+}
+loadSettings();
+function saveSettings() {
+
+    localStorage.timezone = $("#timezone").val();
+    localStorage.checkbox = $('input[type=radio]:checked').val();
+    localStorage.checkbox2 = $('input[type=radio]:checked').val();
+}
+
+saveSettings();
+
+$('#cancelButton').click(function() { /* currently resets all LS data*/
     localStorage.clear();
-});
-
-$(function () {
-    var data = localStorage.getItem("stored");
-
-    if (data !== null) {
-        $("input[name='checkbox']").attr("checked", "checked");
-    }
-
-
-});
-
-//////////////////////////////////
-///2nd version trying to get local storage of settings
-$(document).ready(function () {
-  /*
-   * check browser supports local storage
-   */
-  if (localStorage) {
-    /*
-     * if form field values exist in local storage use
-     * them to populate the form when the page loads
-     */
-    if (localStorage.type) {
-      $("#checkbox").find("option[value=" + localStorage.type + "]").attr("selected", true);
-    }
-    if (localStorage.name) {
-      $("#checkbox").val(localStorage.name);
-    }
-  //  if (localStorage.email) {
-//      $("#email").val(localStorage.email);
-  //  }
-//    if (localStorage.message) {
-//      $("#message").val(localStorage.message);
-//    }
-    if (localStorage.subscribe === "checked") {
-      $("#checkbox").attr("checked", "checked");
-    }
-
-    /*
-     * when a form field changes store it's value in local storage
-     */
-    //$("input[type=text],select,textarea").change(function(){
-  //    $this = $(this);
-  //    localStorage[$this.attr("name")] = $this.val();
-  //  });
-    $("input[type=checkbox]").change(function(){
-      $this = $(this);
-      localStorage[$this.attr("name")] = $this.attr("checked");
-    });
-
-    $("form")
-      /*
-       * clear local storage when the form is submitted
-       */
-    //  .submit(function(){
-    //    localStorage.clear();
-    //  })
-      /*
-       * output local storage to the console each time the form changes
-       * (you may want to remove this code on the production server)
-       */
-      .change(function(){
-        console.log(localStorage);
-      });
-  }
 });
 
 //var alert, close;
