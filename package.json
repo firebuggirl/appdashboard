@@ -5,11 +5,13 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "author": "Juliette Tworsey",
   "license": "ISC",
   "dependencies": {
     "chart.js": "^2.1.6",
     "css-toggle-switch": "^4.0.2"
+
   }
 }

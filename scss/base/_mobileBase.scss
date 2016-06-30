@@ -602,24 +602,26 @@ tr{
 
 #messageUser{
   width: 90%;
-  /*margin-left: 5%;*/
-
-/*  height: 300px;*/
+  padding-top: 30px;
 
   @include bp(tablet){
     margin-left: 0%;
     border-right: 3px solid $grey;
   }
 }
+
+
+
+
 #user_error, #message_error{
-  color:red;
+  color: $red;
   font-size: $font_size__h4;
 }
 
 #settings{
   width: 90%;
   /*margin-left: 5%;*/
-  margin-top: em(-10px);
+  margin-top: em(-30px);
 
   /*  border: 1px solid $grey;*/
   @include bp(tablet){
@@ -640,9 +642,7 @@ tr{
   @include flex_column;
 
 }
-.publicParagraph{
-  color: $black;
-}
+
 
 fieldset {
   border: none;
@@ -652,6 +652,8 @@ legend{
   color: $black;
   opacity: 0.7;
   font-size: $font_size__h5;
+  font-weight: $font-weight--bold;
+  padding-bottom: em(20px);
   &:hover{
     opacity: 1;
   }
@@ -720,12 +722,12 @@ textarea:focus, #timezone:focus {
 margin-top: em(30px);
 margin-bottom: em(5px);
 @include bp(tablet){
-  margin-top: em(0px);
+  margin-top: em(40px);
 }
 }
 .switchSpans{
   margin-left: 70%;
-  margin-top: em(-40px);
+  margin-top: em(-23px);
   @include bp(fullscreen){
     margin-left: 33%;
   }
@@ -737,8 +739,8 @@ margin-bottom: em(5px);
   border: em(3px) solid $grey;
   background-color: $medium-purple;
   color: $white;
-  margin-top: em(35px);
-  margin-bottom: em(50px);
+  margin-top: em(45px);
+  margin-bottom: em(58px);
 }
 #timeZoneLabel{
   display: none;

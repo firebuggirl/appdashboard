@@ -919,21 +919,20 @@ tr {
 
 #messageUser {
   width: 90%;
-  /*margin-left: 5%;*/
-  /*  height: 300px;*/ }
+  padding-top: 30px; }
   @media (min-width: 768px) {
     #messageUser {
       margin-left: 0%;
       border-right: 3px solid #878787; } }
 
 #user_error, #message_error {
-  color: red;
+  color: #cc0a0a;
   font-size: 24px; }
 
 #settings {
   width: 90%;
   /*margin-left: 5%;*/
-  margin-top: -0.625em;
+  margin-top: -1.875em;
   /*  border: 1px solid $grey;*/ }
   @media (min-width: 768px) {
     #settings {
@@ -949,16 +948,15 @@ tr {
   flex-direction: column;
   -webkit-flex-direction: column; }
 
-.publicParagraph {
-  color: #000; }
-
 fieldset {
   border: none; }
 
 legend {
   color: #000;
   opacity: 0.7;
-  font-size: 22px; }
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 1.25em; }
   legend:hover {
     opacity: 1; }
 
@@ -1011,11 +1009,11 @@ textarea:focus, #timezone:focus {
   margin-bottom: 0.3125em; }
   @media (min-width: 768px) {
     #settingsFieldset1 > legend:nth-child(1) {
-      margin-top: 0em; } }
+      margin-top: 2.5em; } }
 
 .switchSpans {
   margin-left: 70%;
-  margin-top: -2.5em; }
+  margin-top: -1.4375em; }
   @media (min-width: 1024px) {
     .switchSpans {
       margin-left: 33%; } }
@@ -1026,8 +1024,8 @@ textarea:focus, #timezone:focus {
   border: 0.1875em solid #878787;
   background-color: #796FC6;
   color: #fff;
-  margin-top: 2.1875em;
-  margin-bottom: 3.125em; }
+  margin-top: 2.8125em;
+  margin-bottom: 3.625em; }
 
 #timeZoneLabel {
   display: none; }
