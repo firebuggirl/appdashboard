@@ -20,7 +20,7 @@ $(document).ready(function() {
 //  localStorage.checkbox2 = $('#checkbox2').val();
 
 //});
-$('#settingsForm :checkbox').change(function () {
+$('#checkbox :checkbox').change(function () {
     if ($(this).is(':checked')) {
         console.log($(this).val() + ' is now checked');
     } else {
