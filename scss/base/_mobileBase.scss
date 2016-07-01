@@ -176,12 +176,13 @@ section{
   @include flex;
   @include flex_column;
   @include bp(tablet){
-    width: 95%;
-    margin-left: 5%;
+    width: 93%;
+    margin-left: 7%;
     margin-top: em(100px);
   }
   @include bp(fullscreen){
   margin-top: em(0px);
+  margin-left: 5%;
   }
 }
 
@@ -551,20 +552,6 @@ tr{
   font-size: $font_size__h4;
 }
 
-#settings{
-  width: 90%;
-  margin-top: em(-30px);
-  @include bp(tablet){
-    margin-left: 0%;
-  }
-}
-
-
-#settingsFieldset1 > div:nth-child(2){
-  margin-top: em(-10px);
-	margin-bottom: em(30px);
-
-}
 
 #public{
   @include flex;
@@ -639,13 +626,32 @@ textarea:focus, #timezone:focus {
   }
 }
 
+#settings{
+  width: 90%;
+  margin-top: em(30px);
+  @include bp(tablet){
+    margin-top: em(20px);
+    margin-left: 0%;
+  }
+}
+
+/* label */
 #settingsFieldset1 > legend:nth-child(1){
     margin-top: em(30px);
-    margin-bottom: em(5px);
+    margin-bottom: em(0px);
     @include bp(tablet){
-      margin-top: em(40px);
+      margin-top: em(0px);
     }
 }
+
+/* radio buttons */
+
+#settingsFieldset1 > div:nth-child(2){
+  margin-top: em(0px);
+	margin-bottom: em(40px);
+
+}
+
 
 .switchSpans{
   margin-left: 70%;
@@ -655,6 +661,7 @@ textarea:focus, #timezone:focus {
   }
 }
 
+
 #timezone{
   height: em(60px);
   width: 100%;
@@ -663,6 +670,9 @@ textarea:focus, #timezone:focus {
   color: $white;
   margin-top: em(45px);
   margin-bottom: em(58px);
+  @include bp(tablet){
+      margin-bottom: em(38px);
+  }
 }
 
 #timeZoneLabel{

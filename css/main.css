@@ -548,12 +548,13 @@ section {
   -webkit-flex-direction: column; }
   @media (min-width: 768px) {
     section {
-      width: 95%;
-      margin-left: 5%;
+      width: 93%;
+      margin-left: 7%;
       margin-top: 6.25em; } }
   @media (min-width: 1024px) {
     section {
-      margin-top: 0em; } }
+      margin-top: 0em;
+      margin-left: 5%; } }
 
 /* #toggle_class keeps margin between nav and section flush
    when nav is toggled on and off with sticky header nav */
@@ -878,17 +879,6 @@ tr {
   color: #cc0a0a;
   font-size: 24px; }
 
-#settings {
-  width: 90%;
-  margin-top: -1.875em; }
-  @media (min-width: 768px) {
-    #settings {
-      margin-left: 0%; } }
-
-#settingsFieldset1 > div:nth-child(2) {
-  margin-top: -0.625em;
-  margin-bottom: 1.875em; }
-
 #public {
   display: flex;
   -moz-display: flex;
@@ -948,12 +938,26 @@ textarea:focus, #timezone:focus {
     #submitButton {
       width: 45%; } }
 
+#settings {
+  width: 90%;
+  margin-top: 1.875em; }
+  @media (min-width: 768px) {
+    #settings {
+      margin-top: 1.25em;
+      margin-left: 0%; } }
+
+/* label */
 #settingsFieldset1 > legend:nth-child(1) {
   margin-top: 1.875em;
-  margin-bottom: 0.3125em; }
+  margin-bottom: 0em; }
   @media (min-width: 768px) {
     #settingsFieldset1 > legend:nth-child(1) {
-      margin-top: 2.5em; } }
+      margin-top: 0em; } }
+
+/* radio buttons */
+#settingsFieldset1 > div:nth-child(2) {
+  margin-top: 0em;
+  margin-bottom: 2.5em; }
 
 .switchSpans {
   margin-left: 70%;
@@ -970,6 +974,9 @@ textarea:focus, #timezone:focus {
   color: #fff;
   margin-top: 2.8125em;
   margin-bottom: 3.625em; }
+  @media (min-width: 768px) {
+    #timezone {
+      margin-bottom: 2.375em; } }
 
 #timeZoneLabel {
   display: none; }
