@@ -1,10 +1,4 @@
-//var alert, close;
-// alert = document.getElementsById("alert");
-// close = document.getElementsById("close");
 
-//  close.addEventListener("click", function(){
-//    alert.display = "hidden";
-//  });
 
   $(document).ready(function () {
         $("#alert").show();
@@ -56,9 +50,3 @@ $('.trafficTitlesMobileView').show();
 
     	}
     });
-
-
-
-
-
-    

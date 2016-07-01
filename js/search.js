@@ -16,7 +16,7 @@ $(function(){
   // setup autocomplete function pulling from fakeData[] array
   $('#search').autocomplete({
     lookup: fakeData,
-    onSelect: function (suggestion) {
+     onSelect: function (suggestion) {
       var thehtml = suggestion.value + suggestion.data;
       //$('#outputcontent').html(thehtml);
     }

@@ -1436,6 +1436,8 @@ b).removeClass(b);this.selectedIndex=a;return-1!==this.selectedIndex&&d.length>t
 this.el.val(this.getValue(a.value));e.isFunction(b)&&b.call(this.element,a)},getValue:function(a){var b=this.options.delimiter,c;if(!b)return a;c=this.currentValue;b=c.split(b);return 1===b.length?a:c.substr(0,c.length-b[b.length-1].length)+a},dispose:function(){this.el.off(".autocomplete").removeData("autocomplete");this.disableKillerFn();e(this.suggestionsContainer).remove()}};e.fn.autocomplete=function(a,b){return 0===arguments.length?this.first().data("autocomplete"):this.each(function(){var c=
 e(this),d=c.data("autocomplete");if("string"===typeof a){if(d&&"function"===typeof d[a])d[a](b)}else d&&d.dispose&&d.dispose(),d=new g(this,a),c.data("autocomplete",d)})}});
 
+/* Create member data */
+
 $(function(){
   var names = [
     { value: 'Jason Flemmings', data: 'Member' },
@@ -1477,7 +1479,7 @@ $(function(){
   // setup autocomplete function pulling from fakeData[] array
   $('#search').autocomplete({
     lookup: fakeData,
-    onSelect: function (suggestion) {
+     onSelect: function (suggestion) {
       var thehtml = suggestion.value + suggestion.data;
       //$('#outputcontent').html(thehtml);
     }
@@ -11552,21 +11554,25 @@ var messageText = document.getElementById('messagesText');
 });
 
 
+
 /* Note: messageUserValidate is the ID of the form element and "searchMessages" & "comment" IDs are for the input fields in the Message User Form*/
 
+var emailError,
+    nameError;
+
 document.getElementById("messageUserValidate").onsubmit = function () {
-    var x = document.forms["messageUserValidate"]["searchMessages"].value;
-    var y = document.forms["messageUserValidate"]["comment"].value;
+    var x = document.forms.messageUserValidate.searchMessages.value;
+    var y = document.forms.messageUserValidate.comment.value;
 
     var submit = true;
 
-    if (x == null || x == "") {
+    if (x === null || x === "") {
         nameError = "Please enter the name of the user that you would like to connect with!";
         document.getElementById("user_error").innerHTML = nameError;
         submit = false;
     }
 
-    if (y == null || y == "") {
+    if (y === null || y === "") {
         emailError = "Please enter your message!";
         document.getElementById("message_error").innerHTML = emailError;
         submit = false;
@@ -11576,7 +11582,7 @@ document.getElementById("messageUserValidate").onsubmit = function () {
 
     return submit;
 
-}
+};
 
 function removeWarning() {
     document.getElementById(this.id + "_error").innerHTML = "";

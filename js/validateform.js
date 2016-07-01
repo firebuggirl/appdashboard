@@ -1,19 +1,23 @@
 
+
 /* Note: messageUserValidate is the ID of the form element and "searchMessages" & "comment" IDs are for the input fields in the Message User Form*/
 
+var emailError,
+    nameError;
+
 document.getElementById("messageUserValidate").onsubmit = function () {
-    var x = document.forms["messageUserValidate"]["searchMessages"].value;
-    var y = document.forms["messageUserValidate"]["comment"].value;
+    var x = document.forms.messageUserValidate.searchMessages.value;
+    var y = document.forms.messageUserValidate.comment.value;
 
     var submit = true;
 
-    if (x == null || x == "") {
+    if (x === null || x === "") {
         nameError = "Please enter the name of the user that you would like to connect with!";
         document.getElementById("user_error").innerHTML = nameError;
         submit = false;
     }
 
-    if (y == null || y == "") {
+    if (y === null || y === "") {
         emailError = "Please enter your message!";
         document.getElementById("message_error").innerHTML = emailError;
         submit = false;
@@ -23,7 +27,7 @@ document.getElementById("messageUserValidate").onsubmit = function () {
 
     return submit;
 
-}
+};
 
 function removeWarning() {
     document.getElementById(this.id + "_error").innerHTML = "";

@@ -1,3 +1,5 @@
+/* Create member data */
+
 $(function(){
   var names = [
     { value: 'Jason Flemmings', data: 'Member' },
