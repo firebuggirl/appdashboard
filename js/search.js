@@ -1,3 +1,5 @@
+/* Create fake data for search bar @ top of page */
+
 $(function(){
   var fakeData = [
     { value: 'Daily Traffic', data: 'Traffic' },
@@ -10,8 +12,8 @@ $(function(){
     { value: 'Tablets', data: 'Mobile Users' }
 
   ];
-
-  // setup autocomplete function pulling from currencies[] array
+  // Make fake data searchable in searchbar
+  // setup autocomplete function pulling from fakeData[] array
   $('#search').autocomplete({
     lookup: fakeData,
     onSelect: function (suggestion) {

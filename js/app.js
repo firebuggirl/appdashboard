@@ -1446,7 +1446,7 @@ $(function(){
 
   ];
 
-  // setup autocomplete function pulling from currencies[] array
+  // setup autocomplete function pulling from names[] array
   $('#searchMessages').autocomplete({
     lookup: names,
     onSelect: function (suggestion) {
@@ -1458,6 +1458,8 @@ $(function(){
 
 
 });
+
+/* Create fake data for search bar @ top of page */
 
 $(function(){
   var fakeData = [
@@ -1471,8 +1473,8 @@ $(function(){
     { value: 'Tablets', data: 'Mobile Users' }
 
   ];
-
-  // setup autocomplete function pulling from currencies[] array
+  // Make fake data searchable in searchbar
+  // setup autocomplete function pulling from fakeData[] array
   $('#search').autocomplete({
     lookup: fakeData,
     onSelect: function (suggestion) {
@@ -11574,9 +11576,6 @@ document.getElementById("messageUserValidate").onsubmit = function () {
 
     return submit;
 
-
-
-
 }
 
 function removeWarning() {
@@ -11588,22 +11587,26 @@ document.getElementById("comment").onkeyup = removeWarning;
 ////
 /////////
 
-//hide arrows on page load
+
+
+/* Hide overlay on page load */
 $(document).ready(function () {
-  //  $("#bio").hide();//hide arrows div on page load
-  //  $("iframe").hide();//hide iframe on page load
   $overlay.hide();
 });
 
 
-//Solution: Create an overlay with the large image - Lightbox
+// Create an overlay
 
 var $overlay = $('<div id="overlay"></div>');
-var $messageSent = $("#messageSent");
-var $submitButton =('#submitButton');
-//var $caption = $("<p></p>");
 
-//An message to overlay
+// paragraph that contains sent message confirmation popup
+var $messageSent = $("#messageSent");
+
+// Send button
+var $submitButton =('#submitButton');
+
+
+//Add message to overlay
 $overlay.append($messageSent);
 
 
@@ -11612,7 +11615,7 @@ $("body").append($overlay);
 
 
 
-//Capture the click event on a send button
+//Capture the click event on send button that shows/appends confirmation message on click if input fields have been filled
 $("#messageButton").click(function (event) {
 
   if (document.getElementById("searchMessages").value === "") {
@@ -11643,7 +11646,7 @@ $("#closeOverlay").click(function () {
 });
 
 
-/* Show message that confirms saved settings */
+/* Show message that confirms saved settings for message user form */
 $("#submitButton").click(function (event) {
 
 
@@ -11661,7 +11664,7 @@ $("#submitButton").click(function (event) {
     $('#wrapper').hide();
 
     $messageSent.click(function () {/* Use messageSent click function locally to change
-                                     the inner HTML of $messageSent om #submitButton independently of
+                                     the inner HTML of $messageSent on #submitButton independently of
                                      #messageButton click function, then reload the page to go back to original inner HTML*/
         $overlay.hide();
         $("header").show();
@@ -11674,7 +11677,7 @@ $("#submitButton").click(function (event) {
 });
 
 
-/* Show message that confirms saved settings */
+/* Show message that confirms settings for message user form have been reset */
 $("#cancelButton").click(function (event) {
 
 
@@ -11703,57 +11706,51 @@ $("#cancelButton").click(function (event) {
 
 });
 
-$checkbox = ('#checkbox');
-$checkbox2 = ('#checkbox2');
+/* Save user settings with local storage for settings form (#settingsForm)..
+"#checkbox ID is for first (email) checkbox, "#checkbox2" is ID for 2nd checkbox (profile),
+and "#timezone" ID represents the timezone drop down/select menu */
+
 
 function loadSettings() {
-
-    $('input[value="' + localStorage.checkbox + '"]').prop('checked', true);
-    $('input[value="' + localStorage.checkbox2 + '"]').prop('checked', true);
-    $("#timezone").val(localStorage.timezone);
+	if (localStorage.email == "unchecked") {
+    $('#checkbox').prop('checked', false);
+}
+	if (localStorage.profile == "unchecked") {
+    $('#checkbox2').prop('checked', false);
+}
+    $('#timezone').val(localStorage.timezone);
 }
 
-
-$(document).ready(function() {
-    $(window).unload(saveSettings);
-    loadSettings();
-});
-
-//$('#submitButton').click(function() { /* currently resets all LS data*/
-//  localStorage.timezone = $("#timezone").val();
-//  localStorage.checkbox = $('#checkbox').val();
-//  localStorage.checkbox2 = $('#checkbox2').val();
-
-//});
-$('#checkbox :checkbox').change(function () {
-    if ($(this).is(':checked')) {
-        console.log($(this).val() + ' is now checked');
-    } else {
-        console.log($(this).val() + ' is now unchecked');
-    }
-});
 
 function saveSettings() {
+	if ($('#checkbox').is(":checked")) {
+		localStorage.email = "checked";
+	} else {
+		localStorage.email = "unchecked";
+	}
 
-    localStorage.timezone = $("#timezone").val();
-
-    localStorage.checkbox = $('#checkbox').val();
-
-
-    localStorage.checkbox2 = $('#checkbox2').val();
+	if ($('#checkbox2').is(":checked")) {
+		localStorage.profile = "checked";
+	} else {
+		localStorage.profile = "unchecked";
+	}
+    localStorage.timezone = $('#timezone').val();
 }
-
-
-$('#submitButton').click(function(){
-  saveSettings();
-});
-
-
-$('#cancelButton').click(function() { /* currently resets all LS data*/
-    localStorage.clear();
-
+/* Save user settings when save button is clicked */
+$("#submitButton").click( function() {
+	saveSettings();
 
 });
+
+/* Reset user settings when cancel button is clicked */
+
+$("#cancelButton").click( function() {
+	localStorage.timezone = 0;
+	localStorage.profile = "unchecked";
+	localStorage.email = "unchecked";
+});
+
+loadSettings();
 
 //var alert, close;
 // alert = document.getElementsById("alert");

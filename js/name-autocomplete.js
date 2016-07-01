@@ -8,7 +8,7 @@ $(function(){
 
   ];
 
-  // setup autocomplete function pulling from currencies[] array
+  // setup autocomplete function pulling from names[] array
   $('#searchMessages').autocomplete({
     lookup: names,
     onSelect: function (suggestion) {

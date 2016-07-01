@@ -1,51 +1,45 @@
-$checkbox = ('#checkbox');
-$checkbox2 = ('#checkbox2');
+/* Save user settings with local storage for settings form (#settingsForm)..
+"#checkbox ID is for first (email) checkbox, "#checkbox2" is ID for 2nd checkbox (profile),
+and "#timezone" ID represents the timezone drop down/select menu */
+
 
 function loadSettings() {
-
-    $('input[value="' + localStorage.checkbox + '"]').prop('checked', true);
-    $('input[value="' + localStorage.checkbox2 + '"]').prop('checked', true);
-    $("#timezone").val(localStorage.timezone);
+	if (localStorage.email == "unchecked") {
+    $('#checkbox').prop('checked', false);
+}
+	if (localStorage.profile == "unchecked") {
+    $('#checkbox2').prop('checked', false);
+}
+    $('#timezone').val(localStorage.timezone);
 }
 
-
-$(document).ready(function() {
-    $(window).unload(saveSettings);
-    loadSettings();
-});
-
-//$('#submitButton').click(function() { /* currently resets all LS data*/
-//  localStorage.timezone = $("#timezone").val();
-//  localStorage.checkbox = $('#checkbox').val();
-//  localStorage.checkbox2 = $('#checkbox2').val();
-
-//});
-$('#checkbox :checkbox').change(function () {
-    if ($(this).is(':checked')) {
-        console.log($(this).val() + ' is now checked');
-    } else {
-        console.log($(this).val() + ' is now unchecked');
-    }
-});
 
 function saveSettings() {
+	if ($('#checkbox').is(":checked")) {
+		localStorage.email = "checked";
+	} else {
+		localStorage.email = "unchecked";
+	}
 
-    localStorage.timezone = $("#timezone").val();
-
-    localStorage.checkbox = $('#checkbox').val();
-
-
-    localStorage.checkbox2 = $('#checkbox2').val();
+	if ($('#checkbox2').is(":checked")) {
+		localStorage.profile = "checked";
+	} else {
+		localStorage.profile = "unchecked";
+	}
+    localStorage.timezone = $('#timezone').val();
 }
-
-
-$('#submitButton').click(function(){
-  saveSettings();
-});
-
-
-$('#cancelButton').click(function() { /* currently resets all LS data*/
-    localStorage.clear();
-
+/* Save user settings when save button is clicked */
+$("#submitButton").click( function() {
+	saveSettings();
 
 });
+
+/* Reset user settings when cancel button is clicked */
+
+$("#cancelButton").click( function() {
+	localStorage.timezone = 0;
+	localStorage.profile = "unchecked";
+	localStorage.email = "unchecked";
+});
+
+loadSettings();

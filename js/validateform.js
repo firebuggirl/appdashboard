@@ -23,9 +23,6 @@ document.getElementById("messageUserValidate").onsubmit = function () {
 
     return submit;
 
-
-
-
 }
 
 function removeWarning() {

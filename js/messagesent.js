@@ -1,19 +1,23 @@
-//hide arrows on page load
+
+
+/* Hide overlay on page load */
 $(document).ready(function () {
-  //  $("#bio").hide();//hide arrows div on page load
-  //  $("iframe").hide();//hide iframe on page load
   $overlay.hide();
 });
 
 
-//Solution: Create an overlay with the large image - Lightbox
+// Create an overlay
 
 var $overlay = $('<div id="overlay"></div>');
-var $messageSent = $("#messageSent");
-var $submitButton =('#submitButton');
-//var $caption = $("<p></p>");
 
-//An message to overlay
+// paragraph that contains sent message confirmation popup
+var $messageSent = $("#messageSent");
+
+// Send button
+var $submitButton =('#submitButton');
+
+
+//Add message to overlay
 $overlay.append($messageSent);
 
 
@@ -22,7 +26,7 @@ $("body").append($overlay);
 
 
 
-//Capture the click event on a send button
+//Capture the click event on send button that shows/appends confirmation message on click if input fields have been filled
 $("#messageButton").click(function (event) {
 
   if (document.getElementById("searchMessages").value === "") {
@@ -53,7 +57,7 @@ $("#closeOverlay").click(function () {
 });
 
 
-/* Show message that confirms saved settings */
+/* Show message that confirms saved settings for message user form */
 $("#submitButton").click(function (event) {
 
 
@@ -71,7 +75,7 @@ $("#submitButton").click(function (event) {
     $('#wrapper').hide();
 
     $messageSent.click(function () {/* Use messageSent click function locally to change
-                                     the inner HTML of $messageSent om #submitButton independently of
+                                     the inner HTML of $messageSent on #submitButton independently of
                                      #messageButton click function, then reload the page to go back to original inner HTML*/
         $overlay.hide();
         $("header").show();
@@ -84,7 +88,7 @@ $("#submitButton").click(function (event) {
 });
 
 
-/* Show message that confirms saved settings */
+/* Show message that confirms settings for message user form have been reset */
 $("#cancelButton").click(function (event) {
 
 
