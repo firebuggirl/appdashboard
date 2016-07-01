@@ -20,23 +20,20 @@ body {
 #messages{
   @include flex;
   @include flex_column;
-  /*@include flex_justify_center;*/
   text-align: center;
-  /*max-height: 100px;*/
   width: 100%;
   height:100vh;
- padding-top: em(100px);
- display:none;
+  padding-top: em(100px);
+  display:none;
   background-color: $charcoal;
- position: fixed;
+  position: fixed;
   z-index: 10;
   @include bp(tablet){
-
-    margin-top: em(-40px);
+     margin-top: em(-40px);
   }
   @include bp(fullscreen){
      padding-top: em(160px);
-       height:150vh;
+     height:150vh;
   }
 
 }
@@ -60,7 +57,6 @@ body {
   }
   @include bp(tablet){
     width: 80%;
-  /*  height: 10vh;*/
     margin-left: 10%;
     font-size: $font_size__h4;
   }
@@ -75,7 +71,6 @@ body {
 
 #friend:hover, #group:hover, #password:hover{
   fill: lighten($limeGreen, 20%);
-/*  animation: turn 1.1s .2s ease-out forwards;*/
   transform: scale(1.3);
 }
 
@@ -86,7 +81,6 @@ body {
 .nav {
   @include flex;
   @include flex_column;
-  /*@include flex_align_items--center;*/
   list-style-type: none;
   position: fixed;
   margin: em(70px) auto;
@@ -94,9 +88,7 @@ body {
   width: 100%;
   z-index: 10;
   background-color: darken($medium-purple, 20%);
-  /*padding-top: em(180px);*/
   @include bp(tablet){
-
      margin-top: em(-40px);
      padding-top: em(0px);
      width: 7%;
@@ -112,7 +104,6 @@ body {
 }
 
 ul {
-  /*border-bottom: 1px solid #ccc;*/
   list-style: none;
   margin: 0 0 1.5rem 0;
   padding: 0px;
@@ -142,10 +133,6 @@ li {
   );
   background-size: 100% 200%;
   background-position: top center;
-  /*color: #666;*/
-  /*display: block;
-  text-align: center;
-  text-decoration: none;*/
   transition: all .25s ease-in-out;
   &:hover {
     background-position: bottom center;
@@ -171,28 +158,18 @@ li {
 }
 
 
-
-
-
-
 #emptyDiv{
   @include bp(fullscreen){
   content: " ";
   height:em(150px);
   width: 93%;
 }
-@include bp(large_screen){
-  /*height: em(380px);*/
-}
-}
-#wrapper{
-  /*width: 100%;*/
-  height: 100vh;
-  @include bp(tablet){
-/* width:93%;
-  margin-left: 7%;*/
 }
 
+#wrapper{
+  height: 100vh;
+  @include bp(tablet){
+  }
 }
 
 section{
@@ -201,9 +178,7 @@ section{
   @include bp(tablet){
     width: 95%;
     margin-left: 5%;
-
     margin-top: em(100px);
-
   }
   @include bp(fullscreen){
   margin-top: em(0px);
@@ -251,22 +226,12 @@ p{
   @include flex;
   @include flex_justify_space_around;
   @include flex_align_items--center;
-  /*text-align: left;*/
-
   margin-bottom: em(60px);
 
 }
 
-
-  @include bp(fullscreen){
-  /*height: 100vh;*/
-  /*width: 98%;*/
-  /*padding-top: 6.25em;*/
-  /*margin-left: 1%;*/
-
-
 }
-}
+
 .flexAlert #alert {
 	display: block;
 	align-items: center;
@@ -281,7 +246,7 @@ p{
   background-color: $medium-purple;
   height: em(40px);
   display: none;
- width:98%;
+  width:98%;
   padding-top: em(13px);
   @include bp(tablet){
   }
@@ -291,9 +256,8 @@ p{
   font-weight: $font-weight--bold;
   margin-right: em(10px);
   margin-left: em(5px);
-  /*padding-right: em(10px);
-  padding-left: em(10px);*/
 }
+
 #close{
   float: right;
 }
@@ -308,7 +272,7 @@ h3{
 }
 input[type="search"] {
 	width: 60%;
-	height: em(40px)inherit;
+	height: em(40px);
 	margin-top: em(20px);
 	margin-bottom: em(40px);
   border-radius: 4%;
@@ -317,39 +281,38 @@ input[type="search"] {
   background-color: $medium-purple;
   color: $white;
   @include bp(tablet){
-    /*width: 40%;*/
     margin-top: em(0px);
     margin-bottom: em(0px);
     height: em(20px);
   }
 }
 
-input[type="search"]:focus {
 
+input[type="search"]:focus {
   border: 8px solid $medium-purple;
   color: $white;
-  /*border-color: #c6454e;*/
   background-color: darken($medium-purple, 20%);
 }
-
-
 
 
 #weekly{
   padding-top: em(20px);
   text-align: center;
 }
+
 #trafficTime{
   @include flex;
   @include flex_justify_space_between;
   padding-bottom: em(20px);
 
 }
+
 .trafficTimeHover:hover{
   color: $white;
   background-color: $limeGreen;
   border-radius: 30%;
 }
+
 button{
 	border-radius: 40%;
 	height: em(40px);
@@ -360,6 +323,7 @@ button{
     color: $white;
   }
 }
+
 #chart{
   margin-top: em(100px);
 }
@@ -375,11 +339,10 @@ button{
   text-align: center;
 }
 
-  .trafficTitlesTabletView{
+.trafficTitlesTabletView{
   display:none;
     @include bp(tablet){
       @include flex;
-      /*@include flex_column;*/
       @include flex_justify_space_around;
     margin-top: em(-60px);
     }
@@ -389,10 +352,7 @@ button{
     @include flex;
     @include flex_column;
     @include flex_justify_space_between;
-    /*height: em(500px);*/
-
     @include bp(tablet){
-
     @include flex_row;
     @include flex_justify_space_between;
     margin-top: em(30px);
@@ -419,37 +379,32 @@ button{
     text-align: left;
   }
 }
+
 .socialStats{
   @include flex;
   @include flex_column;
- @include flex_justify_center;
+  @include flex_justify_center;
   @include flex_align_items--center;
   text-align: center;
-  /*width:98%;*/
-
   margin-top: 5%;
   @include bp(tablet){
     @include flex_row;
     @include flex_justify_space_around;
-  /*  margin-top: 2em;*/
-    /*width: 93%;*/
+
   }
 
 }
 
 .innerFlexWrap{
-  @include flex;
+   @include flex;
    @include flex_justify_space_around;
    @include flex_align_items--center;
    background-color: $ivory;
-  border: 4px solid $grey;
-  width: 70%;
-  height: 120px;
-  margin-bottom: em(50px);
-  &:hover{
-  /*  opacity: 1;*/
-  }
-  @include bp(tablet){
+   border: 4px solid $grey;
+   width: 70%;
+   height: 120px;
+   margin-bottom: em(50px);
+   @include bp(tablet){
     width: em(270px);
     height: em(160px);
   }
@@ -473,11 +428,11 @@ button{
       margin-right: em(40px);
   }
 }
+
 #twitter, #facebook, #google, #linkedIn, #pinterest, #youtube{
   height: em(55px);
   fill: $white;
   animation: turn 1.1s .2s ease-out forwards;
-
   @include bp(fullscreen){
     height: em(70px);
 
@@ -485,11 +440,6 @@ button{
 
 }
 
-
-
-.statText{
-
-}
 
 h4{
   color: $medium-purple;
@@ -500,6 +450,7 @@ h4{
     margin-bottom: em(-30px);
   }
 }
+
 .socialNumbers{
   font-size: $font-size__subTitle;
   @include bp(fullscreen){
@@ -521,17 +472,13 @@ h4{
 }
 
 #newMembersDiv, #recentActivity{
-/*  width: 100%;*/
   border: 2px solid $grey;
   @include bp(tablet){
     margin-left: 0%;
     width: 50%;
   }
 }
-.flexArrows{
-  /*@include flex;*/
-  /*@include flex_justify_space_between;*/
-}
+
 .arrow{
   height: 40px;
   fill: $medium-purple;
@@ -545,37 +492,28 @@ tr.flexArrows:nth-child(4){
 .tableH3{
   margin-left: 5%;
 }
+
 table {
   border-spacing: 0.5rem;
   width:100%;
-/*  @include flex;*/
-
-
 }
-tbody{
-/*  @include flex;
-  @include flex_column;*/
 
-  /*width: 100%;*/
-  /*margin-left: 5%;*/
-}
 
 td {
-
   padding: 0.5rem;
 }
+
 tr{
   border-bottom: 3px solid $grey;
   margin-bottom: 30px;
 }
+
 #table > tbody:nth-child(1) > tr:nth-child(4){
   border-bottom: 0px;
 }
 
 #rowspan{
   background-color: $limeGreen;
-
-
 }
 
 
@@ -592,9 +530,7 @@ tr{
   @include flex_align_items--center;
   padding-bottom: em(30px);
   width: 100%;
-  /*height: 400px;*/
   background-color:lighten($grey, 30%);
-  /*border: 5px solid $grey;*/
   @include bp(tablet){
     @include flex_row;
   }
@@ -603,14 +539,11 @@ tr{
 #messageUser{
   width: 90%;
   padding-top: 30px;
-
   @include bp(tablet){
     margin-left: 0%;
     border-right: 3px solid $grey;
   }
 }
-
-
 
 
 #user_error, #message_error{
@@ -620,19 +553,15 @@ tr{
 
 #settings{
   width: 90%;
-  /*margin-left: 5%;*/
   margin-top: em(-30px);
-
-  /*  border: 1px solid $grey;*/
   @include bp(tablet){
     margin-left: 0%;
-
   }
 }
 
-#settingsFieldset1 > div:nth-child(2){
 
-	margin-top: em(-10px);
+#settingsFieldset1 > div:nth-child(2){
+  margin-top: em(-10px);
 	margin-bottom: em(30px);
 
 }
@@ -658,9 +587,7 @@ legend{
     opacity: 1;
   }
 }
-#settingsForm{
 
-}
 
 #searchMessages{
   width: 100%;
@@ -674,27 +601,22 @@ legend{
 
 textarea{
   width: 100%;
-
   border: em(3px) solid $grey;
   background-color: $medium-purple;
   color: $white;
   border-radius: 4%;
 	font-size: 16pt;
-
   @include bp(tablet){
-    /*width: 40%;*/
     margin-top: em(0px);
     margin-bottom: em(0px);
 
   }
-
 
 }
 
 textarea:focus, #timezone:focus {
   border: 8px solid $medium-purple;
   color: $white;
-  /*border-color: #c6454e;*/
   background-color: darken($medium-purple, 20%);
 }
 
@@ -718,13 +640,13 @@ textarea:focus, #timezone:focus {
 }
 
 #settingsFieldset1 > legend:nth-child(1){
-/*  margin-top: em(-90px);*/
-margin-top: em(30px);
-margin-bottom: em(5px);
-@include bp(tablet){
-  margin-top: em(40px);
+    margin-top: em(30px);
+    margin-bottom: em(5px);
+    @include bp(tablet){
+      margin-top: em(40px);
+    }
 }
-}
+
 .switchSpans{
   margin-left: 70%;
   margin-top: em(-23px);
@@ -742,9 +664,11 @@ margin-bottom: em(5px);
   margin-top: em(45px);
   margin-bottom: em(58px);
 }
+
 #timeZoneLabel{
   display: none;
 }
+
 #cancelButton{
   color: $white;
   background-color: $grey;
@@ -763,7 +687,6 @@ margin-bottom: em(5px);
 }
 
 #overlay{
-  /*background:rgba(0,0,0,0.3);*/
   background-color: $medium-purple;
   width:100%;
   height: 100vh;
@@ -777,7 +700,6 @@ margin-bottom: em(5px);
 
 
 #messageSent{
-
   @include flex;
   @include flex_align_items--center;
   @include flex_justify_center;
@@ -794,7 +716,6 @@ margin-bottom: em(5px);
   margin-top: em(-200px);
 }
 
-
 }
 
 #sentMessageText{
@@ -804,10 +725,11 @@ margin-bottom: em(5px);
 }
 
 }
+
 #closeOverlay{
   fill: $white;
   height: em(100px);
-   animation: turn 1.1s .2s ease-out forwards;
+  animation: turn 1.1s .2s ease-out forwards;
 
 }
 
@@ -816,5 +738,5 @@ margin-bottom: em(5px);
   width: 200px;
   height: 100px;
   background-color: $white;
-  border-color: 3px solid $medium-purple;
+  border: 3px solid $medium-purple;
 }

@@ -4,16 +4,17 @@
 
 }
 #cornerNavIcon{
-
   margin-right: 1.5em;
 }
 /* Wrapped  picToggle image in a link tag for accessibility and for increased functionality, then hid anchor text to get rid of accessibility warning on Chrome accessibility audit*/
 #navTextIndent{
   margin-left: em(-9999px);
 }
+
 h1{
   color: $white;
 }
+
 .navText{
   color: $white;
   opacity: 0.7;
@@ -27,13 +28,10 @@ h1{
   }
 }
 
-
-
 header {
   @include fixed_header;
   @include flex;
   @include flex_row;
-  /*@include flex_justify_center;*/
   min-height:50px;
   width: 100%;
   z-index: 12;
@@ -42,12 +40,12 @@ header {
 
   }
 }
+
 #headerH1{
   font-size: $font_size__h5;
   font-weight: $font-weight--light;
   margin-left: em(30px);
   margin-top: em(-5px);
-    /*margin-right: em(10px);*/
   @include bp(tablet){
     margin-left: em(5px);
   }
@@ -56,13 +54,16 @@ header {
   }
 
 }
+
+
 #headerH1Span{
   font-weight: $font-weight--bold;
 }
 
+
 #headerNav{
     margin-left: auto;
-  @include bp(tablet){
+    @include bp(tablet){
     @include flex;
     @include flex_justify_space_around;
     margin-left: auto;
@@ -70,13 +71,7 @@ header {
 
   }
 }
-/*#bell{
-  margin-left: em(20px);
-  @include bp(tablet){
 
-  padding-right: em(20px);
-  }
-}*/
 
 #dot{
   height: 8px;
@@ -84,15 +79,16 @@ header {
   margin-bottom: em(30px);
 }
 
+
 #line{
    height: 8px;
  }
+
 
 #profileImg{
   border-radius: 50%;
   height: em(40px);
   width: em(40px);
-  /*margin-left: em(20px);*/
   @include bp(tablet){
 
   }
