@@ -862,11 +862,19 @@ tr {
   border: 4px solid #796FC6; }
 
 #commentSvg, #like, #joinedGroup, #online {
-  width: 2.5em;
-  margin-left: 0.625em;
+  width: 1.875em;
+  margin-left: 0.125em;
   margin-top: -0.625em;
   position: absolute;
   fill: #3C943C; }
+  @media (min-width: 768px) {
+    #commentSvg, #like, #joinedGroup, #online {
+      margin-left: 0.1875em; } }
+  @media (min-width: 1024px) {
+    #commentSvg, #like, #joinedGroup, #online {
+      width: 2.5em;
+      margin-left: 0.625em;
+      margin-top: -0.625em; } }
 
 #lastWrapperDiv {
   display: flex;
