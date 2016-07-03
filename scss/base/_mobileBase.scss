@@ -375,7 +375,7 @@ button{
   margin-bottom: 1.5em;
   text-align: center;
   @include bp(fullscreen){
-    margin-top: 12em;
+    margin-top: 6em;
     padding-left: em(10px);
     text-align: left;
   }
@@ -406,11 +406,15 @@ button{
    height: 120px;
    margin-bottom: em(50px);
    @include bp(tablet){
-    width: em(270px);
+    width: 35%;
     height: em(160px);
   }
   @include bp(fullscreen){
-    width: em(370px);
+    width: 33%;
+  }
+  @include bp(large_screen){
+    width:30%;
+
   }
 }
 
@@ -426,7 +430,11 @@ button{
   @include bp(fullscreen){
     height: em(120px);
     width: em(120px);
-      margin-right: em(40px);
+    margin-right: em(40px);
+  }
+  @include bp(large_screen){
+    margin-right: em(0px);
+    margin-left: em(20px);
   }
 }
 
@@ -441,21 +449,27 @@ button{
 
 }
 
+.statText{
+  @include bp(fullscreen){
+    width: 60%;
+  }
+}
+
 
 h4{
   color: $medium-purple;
   font-size: $font_size__h1;
   margin-bottom: em(-10px);
   @include bp(fullscreen){
-    margin-left: em(-25px);
-    margin-bottom: em(-30px);
+    margin-left: em(-10px);
+    margin-bottom: em(-10px);
   }
 }
 
 .socialNumbers{
   font-size: $font-size__subTitle;
   @include bp(fullscreen){
-    font-size: $font-size__bannerTitle;
+    font-size: $font_size__h1;
   }
 
 }
@@ -523,6 +537,17 @@ tr{
   border-radius: 50%;
   border: 4px solid $medium-purple;
 }
+
+#comment, #like, #joinedGroup, #online{
+  width: em(40px);
+  margin-left: em(10px);
+  margin-top: em(-10px);
+  position: absolute;
+  fill: $limeGreen;
+
+}
+
+
 
 #lastWrapperDiv{
   @include flex;
