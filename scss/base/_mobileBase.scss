@@ -386,11 +386,12 @@ button{
   @include flex_column;
   @include flex_justify_center;
   @include flex_align_items--center;
+  background-color: lighten($grey, 50%);
   text-align: center;
   margin-top: 5%;
   @include bp(tablet){
     @include flex_row;
-    @include flex_justify_space_around;
+    @include flex_justify_space_between;
 
   }
 
@@ -458,9 +459,10 @@ button{
 
 h4{
   color: $medium-purple;
-  font-size: $font_size__h1;
+  font-size: $font_size__h3;
   margin-bottom: em(-10px);
   @include bp(fullscreen){
+    font-size: $font_size__h1;
     margin-left: em(-10px);
     margin-bottom: em(-10px);
   }
@@ -479,7 +481,7 @@ h4{
   @include flex;
   @include flex_column;
   width: 100%;
-  background-color:lighten($grey, 30%);
+  background-color:lighten($grey, 50%);
   border: 2px solid $grey;
   @include bp(tablet){
     @include flex_row;
@@ -564,7 +566,7 @@ tr{
   @include flex_align_items--center;
   padding-bottom: em(30px);
   width: 100%;
-  background-color:lighten($grey, 30%);
+  background-color:lighten($grey, 50%);
   @include bp(tablet){
     @include flex_row;
   }
