@@ -182,7 +182,7 @@ section{
   }
   @include bp(fullscreen){
   margin-top: em(0px);
-  margin-left: 5%;
+  margin-left: 6%;
   }
 }
 
@@ -271,14 +271,18 @@ h3{
   }
 
 }
+
+#socialStatsH3{
+  padding-top: em(25px);
+}
 input[type="search"] {
 	width: 60%;
 	height: em(40px);
 	margin-top: em(20px);
 	margin-bottom: em(40px);
-  border-radius: 4%;
+  border-radius: 2%;
 	font-size: 16pt;
-  border: em(3px) solid $grey;
+  /*border: em(3px) solid $grey;*/
   background-color: $medium-purple;
   color: $white;
   @include bp(tablet){
@@ -290,7 +294,7 @@ input[type="search"] {
 
 
 input[type="search"]:focus {
-  border: 8px solid $medium-purple;
+  border: 4px solid $medium-purple;
   color: $white;
   background-color: darken($medium-purple, 20%);
 }
@@ -338,14 +342,16 @@ button{
 .trafficTitlesMobileView{
   display: none;
   text-align: center;
+  border-top: 3px solid lighten($grey, 50%);
 }
 
 .trafficTitlesTabletView{
   display:none;
     @include bp(tablet){
-      @include flex;
-      @include flex_justify_space_around;
+    @include flex;
+    @include flex_justify_space_around;
     margin-top: em(-60px);
+    border-top: 2px solid lighten($grey, 20%);
     }
   }
 
@@ -374,6 +380,7 @@ button{
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   text-align: center;
+  border-top: 2px solid lighten($grey, 20%);
   @include bp(fullscreen){
     margin-top: 6em;
     padding-left: em(10px);
@@ -402,7 +409,8 @@ button{
    @include flex_justify_space_around;
    @include flex_align_items--center;
    background-color: $ivory;
-   border: 4px solid $grey;
+   border: 2px solid lighten($grey, 20%);
+   border-radius: 3%;
    width: 70%;
    height: 120px;
    margin-bottom: em(50px);
@@ -482,14 +490,14 @@ h4{
   @include flex_column;
   width: 100%;
   background-color:lighten($grey, 50%);
-  border: 2px solid $grey;
+  border: 2px solid lighten($grey, 20%);
   @include bp(tablet){
     @include flex_row;
   }
 }
 
 #newMembersDiv, #recentActivity{
-  border: 2px solid $grey;
+  border-right: 2px solid lighten($grey, 20%);
   @include bp(tablet){
     margin-left: 0%;
     width: 50%;
@@ -521,7 +529,7 @@ td {
 }
 
 tr{
-  border-bottom: 3px solid $grey;
+  border-bottom: 2px solid lighten($grey, 20%);
   margin-bottom: 30px;
 }
 
@@ -581,7 +589,7 @@ tr{
     text-align: left;
     padding-top: em(20px);
     margin-left: 0%;
-    border-right: 3px solid $grey;
+    border-right: 2px solid lighten($grey, 20%);
   }
 }
 
@@ -633,10 +641,10 @@ textarea{
   @include flex;
   height: 150px;
   width: 100%;
-  border: em(3px) solid $grey;
+/*  border: em(3px) solid $grey;*/
   background-color: $medium-purple;
   color: $white;
-  border-radius: 4%;
+  border-radius: 2%;
 	font-size: 16pt;
   @include bp(tablet){
     margin-top: em(0px);
@@ -655,7 +663,7 @@ textarea:focus, #timezone:focus {
 
 #messageButton{
   width: 100%;
-  border-radius: 4%;
+  border-radius: 2%;
   color: $white;
   background-color: $medium-purple;
 }
@@ -664,7 +672,7 @@ textarea:focus, #timezone:focus {
   color: $white;
   background-color: $medium-purple;
   width: 100%;
-  border-radius: 4%;
+  border-radius: 2%;
   margin-bottom: 2%;
   @include bp(tablet){
     width: 45%;
@@ -685,7 +693,6 @@ textarea:focus, #timezone:focus {
 
 #settingsFieldset1 > legend:nth-child(1){
     margin-top: em(-40px);
-
     margin-bottom: em(0px);
     @include bp(tablet){
       margin-top: em(0px);
@@ -713,7 +720,7 @@ textarea:focus, #timezone:focus {
 #timezone{
   height: em(60px);
   width: 100%;
-  border: em(3px) solid $grey;
+  /*border: em(3px) solid $grey;*/
   background-color: $medium-purple;
   color: $white;
   margin-top: em(45px);

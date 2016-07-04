@@ -554,7 +554,7 @@ section {
   @media (min-width: 1024px) {
     section {
       margin-top: 0em;
-      margin-left: 5%; } }
+      margin-left: 6%; } }
 
 /* #toggle_class keeps margin between nav and section flush
    when nav is toggled on and off with sticky header nav */
@@ -622,14 +622,17 @@ h3 {
   h3:hover {
     opacity: 1; }
 
+#socialStatsH3 {
+  padding-top: 1.5625em; }
+
 input[type="search"] {
   width: 60%;
   height: 2.5em;
   margin-top: 1.25em;
   margin-bottom: 2.5em;
-  border-radius: 4%;
+  border-radius: 2%;
   font-size: 16pt;
-  border: 0.1875em solid #878787;
+  /*border: em(3px) solid $grey;*/
   background-color: #796FC6;
   color: #fff; }
   @media (min-width: 768px) {
@@ -639,7 +642,7 @@ input[type="search"] {
       height: 1.25em; } }
 
 input[type="search"]:focus {
-  border: 8px solid #796FC6;
+  border: 4px solid #796FC6;
   color: #fff;
   background-color: #453b94; }
 
@@ -677,7 +680,8 @@ button {
 
 .trafficTitlesMobileView {
   display: none;
-  text-align: center; }
+  text-align: center;
+  border-top: 3px solid white; }
 
 .trafficTitlesTabletView {
   display: none; }
@@ -687,7 +691,8 @@ button {
       -moz-display: flex;
       justify-content: space-around;
       -webkit-justify-content: space-around;
-      margin-top: -3.75em; } }
+      margin-top: -3.75em;
+      border-top: 2px solid #bababa; } }
 
 #dailyTraffic {
   display: flex;
@@ -712,7 +717,8 @@ button {
 #socialStatH3Div {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-  text-align: center; }
+  text-align: center;
+  border-top: 2px solid #bababa; }
   @media (min-width: 1024px) {
     #socialStatH3Div {
       margin-top: 6em;
@@ -746,7 +752,8 @@ button {
   align-items: center;
   -moz-align-items: center;
   background-color: #F8FBF5;
-  border: 4px solid #878787;
+  border: 2px solid #bababa;
+  border-radius: 3%;
   width: 70%;
   height: 120px;
   margin-bottom: 3.125em; }
@@ -818,14 +825,14 @@ h4 {
   -webkit-flex-direction: column;
   width: 100%;
   background-color: white;
-  border: 2px solid #878787; }
+  border: 2px solid #bababa; }
   @media (min-width: 768px) {
     #membersAndActivity {
       flex-direction: row;
       -webkit-flex-direction: row; } }
 
 #newMembersDiv, #recentActivity {
-  border: 2px solid #878787; }
+  border-right: 2px solid #bababa; }
   @media (min-width: 768px) {
     #newMembersDiv, #recentActivity {
       margin-left: 0%;
@@ -849,7 +856,7 @@ td {
   padding: 0.5rem; }
 
 tr {
-  border-bottom: 3px solid #878787;
+  border-bottom: 2px solid #bababa;
   margin-bottom: 30px; }
 
 #table > tbody:nth-child(1) > tr:nth-child(4) {
@@ -905,7 +912,7 @@ tr {
       text-align: left;
       padding-top: 1.25em;
       margin-left: 0%;
-      border-right: 3px solid #878787; } }
+      border-right: 2px solid #bababa; } }
 
 #messageUserValidate {
   margin-top: -0.3125em; }
@@ -945,10 +952,10 @@ textarea {
   -moz-display: flex;
   height: 150px;
   width: 100%;
-  border: 0.1875em solid #878787;
+  /*  border: em(3px) solid $grey;*/
   background-color: #796FC6;
   color: #fff;
-  border-radius: 4%;
+  border-radius: 2%;
   font-size: 16pt; }
   @media (min-width: 768px) {
     textarea {
@@ -962,7 +969,7 @@ textarea:focus, #timezone:focus {
 
 #messageButton {
   width: 100%;
-  border-radius: 4%;
+  border-radius: 2%;
   color: #fff;
   background-color: #796FC6; }
 
@@ -970,7 +977,7 @@ textarea:focus, #timezone:focus {
   color: #fff;
   background-color: #796FC6;
   width: 100%;
-  border-radius: 4%;
+  border-radius: 2%;
   margin-bottom: 2%; }
   @media (min-width: 768px) {
     #submitButton {
@@ -1007,7 +1014,7 @@ textarea:focus, #timezone:focus {
 #timezone {
   height: 3.75em;
   width: 100%;
-  border: 0.1875em solid #878787;
+  /*border: em(3px) solid $grey;*/
   background-color: #796FC6;
   color: #fff;
   margin-top: 2.8125em;
