@@ -29,6 +29,9 @@
   @else if $point == large_screen {
     @media (min-width: 1280px) { @content; }
   }
+  @else if $point == extraLarge_screen {
+    @media (min-width: 1500px) { @content; }
+  }
   @else if $point == mobile_large{
     @media (min-width: 414px) { @content;}
   }

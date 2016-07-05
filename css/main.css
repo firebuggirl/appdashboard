@@ -765,9 +765,12 @@ button {
   border-top: 2px solid #bababa; }
   @media (min-width: 1024px) {
     #socialStatH3Div {
-      margin-top: 6em;
+      margin-top: 8.75em;
       padding-left: 0.625em;
       text-align: left; } }
+  @media (min-width: 1500px) {
+    #socialStatH3Div {
+      margin-top: 13.75em; } }
 
 .socialStats {
   display: flex;

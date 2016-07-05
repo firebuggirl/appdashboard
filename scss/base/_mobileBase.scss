@@ -314,6 +314,7 @@ h3{
 
 #socialStatsH3{
   padding-top: em(25px);
+
 }
 input[type="search"] {
 	width: 80%;
@@ -431,9 +432,12 @@ button{
   text-align: center;
   border-top: 2px solid lighten($grey, 20%);
   @include bp(fullscreen){
-    margin-top: 6em;
+    margin-top: em(140px);
     padding-left: em(10px);
     text-align: left;
+  }
+  @include bp(extraLarge_screen){
+    margin-top: em(220px);
   }
 }
 
