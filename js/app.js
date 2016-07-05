@@ -11521,7 +11521,7 @@ var messageText = document.getElementById('messagesText');
   bell.addEventListener("click", function(e){
     if(messages.style.display = 'none'){
       messages.style.display = 'block';
-    }
+    } 
 
  });
 
@@ -11653,6 +11653,8 @@ $("#closeOverlay").click(function () {
 
 
 /* Show message that confirms saved settings for message user form */
+
+var closeX = ('<p class="closeX"> X </p>');
 $("#submitButton").click(function (event) {
 
 
@@ -11661,9 +11663,9 @@ $("#submitButton").click(function (event) {
     $("header").hide();
   //Show the overlay.
     $overlay.show();
-    $messageSent.html("Your settings have been saved!");
+    $messageSent.html("Your settings have been saved ").append(closeX);
     $messageSent.css("color", "#ffffff");
-    $messageSent.css("fontSize", "26px");
+    $messageSent.css("fontSize", "36px");
     $messageSent.show();
 
     $('.main-nav ul li').hide();
@@ -11683,6 +11685,7 @@ $("#submitButton").click(function (event) {
 });
 
 
+var closeX2 = ('<p class="closeX"> X </p>');
 /* Show message that confirms settings for message user form have been reset */
 $("#cancelButton").click(function (event) {
 
@@ -11692,7 +11695,7 @@ $("#cancelButton").click(function (event) {
     $("header").hide();
   //Show the overlay.
     $overlay.show();
-    $messageSent.html("Your settings have been reset!");
+    $messageSent.html("Your settings have been reset!").append(closeX2);
     $messageSent.css("color", "#ffffff");
     $messageSent.css("fontSize", "26px");
     $messageSent.show();
@@ -11758,13 +11761,7 @@ $("#cancelButton").click( function() {
 
 loadSettings();
 
-//var alert, close;
-// alert = document.getElementsById("alert");
-// close = document.getElementsById("close");
 
-//  close.addEventListener("click", function(){
-//    alert.display = "hidden";
-//  });
 
   $(document).ready(function () {
         $("#alert").show();
@@ -11816,12 +11813,6 @@ $('.trafficTitlesMobileView').show();
 
     	}
     });
-
-
-
-
-
-    
 
 //WEEKLY CHART
 //

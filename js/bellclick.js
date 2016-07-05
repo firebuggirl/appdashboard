@@ -11,7 +11,7 @@ var messageText = document.getElementById('messagesText');
   bell.addEventListener("click", function(e){
     if(messages.style.display = 'none'){
       messages.style.display = 'block';
-    }
+    } 
 
  });
 

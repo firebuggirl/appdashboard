@@ -14,6 +14,14 @@ body {
   background-color: $white;
 
 }
+
+
+.closeAlert{
+  position: relative;
+  padding-right: em(8px);
+  margin-top: em(-60px);
+
+}
 #messagesText{
 
 }
@@ -40,7 +48,7 @@ body {
 
 .alertMessages{
   @include flex;
-  @include flex_justify_center;
+  @include flex_justify_space_between;
   @include flex_align_items--center;
   background-color: $white;
   color:$red;
@@ -48,7 +56,7 @@ body {
   margin-left: 5%;
   margin-bottom: 5%;
   width: 90%;
-  height: 20vh;
+  height: 15vh;
   border: 10px solid darken($medium-purple, 20%);
   opacity: 0.7;
   border-radius: 4%;
@@ -62,11 +70,29 @@ body {
   }
 }
 
+.alertMessagesLeft{
+  @include flex;
+  @include flex_align_items--center;
+  @include flex_justify_start;
+  width: 80%;
+  @include bp(tablet){
+    @include flex_justify_space_around;
+    width: 73%;
+  }
+  @include bp(fullscreen){
+    width: 43%;
+  }
+
+}
+
 #friend, #group, #password{
   height: em(40px);
   fill: $limeGreen;
   transition: transform .2s ease-out;
-  margin-left: em(20px);
+  margin-left: em(2px);
+  @include bp(tablet){
+    margin-left: em(20px);
+  }
 }
 
 #friend:hover, #group:hover, #password:hover{
@@ -276,19 +302,24 @@ h3{
   padding-top: em(25px);
 }
 input[type="search"] {
-	width: 60%;
-	height: em(40px);
-	margin-top: em(20px);
+	width: 80%;
+	height: em(30px);
+	margin-top: em(40px);
 	margin-bottom: em(40px);
   border-radius: 2%;
 	font-size: 16pt;
-  /*border: em(3px) solid $grey;*/
   background-color: $medium-purple;
   color: $white;
   @include bp(tablet){
     margin-top: em(0px);
     margin-bottom: em(0px);
     height: em(20px);
+  }
+  @include bp(fullscreen){
+    width: 83%;
+  }
+  @include bp(large_screen){
+    width: 87%;
   }
 }
 
@@ -666,6 +697,10 @@ textarea:focus, #timezone:focus {
   border-radius: 2%;
   color: $white;
   background-color: $medium-purple;
+  margin-top: em(10px);
+  @include bp(fullscreen){
+    margin-top: em(5px);
+  }
 }
 
 #submitButton{
@@ -773,6 +808,7 @@ textarea:focus, #timezone:focus {
   border: 3px solid $white;
   margin: 0 auto;
   background-color: $limeGreen;
+  padding: em(4px);
   @include bp(tablet){
     height:300px;
     width:400px;
@@ -781,6 +817,22 @@ textarea:focus, #timezone:focus {
   margin-top: em(-200px);
 }
 
+}
+
+.closeX{
+  margin-top: em(-50px);
+  margin-left: -15px;
+  @include bp(tablet){
+    margin-top: em(-80px);
+  }
+}
+
+.closeX{
+  margin-top: em(-70px);
+  margin-left: -15px;
+  @include bp(tablet){
+    margin-top: em(-120px);
+  }
 }
 
 #sentMessageText{
