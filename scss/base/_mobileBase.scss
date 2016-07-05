@@ -71,7 +71,14 @@ body {
     font-size: $font_size__h4;
   }
   @include bp(fullscreen){
+    height: 13vh;
+    width: 50vh;
+   margin: auto;
+
+  }
+  @include bp(large_screen){
     height: 18vh;
+    width: 70vh;
   }
 }
 
@@ -80,13 +87,13 @@ body {
   @include flex_align_items--center;
   @include flex_justify_start;
   width: 80%;
-  overflow-y: scroll;
   @include bp(tablet){
     @include flex_justify_space_around;
     width: 73%;
   }
   @include bp(fullscreen){
-    width: 43%;
+    width: 83%;
+
   }
 
 }

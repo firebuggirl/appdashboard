@@ -468,7 +468,13 @@ body {
       font-size: 24px; } }
   @media (min-width: 1024px) {
     .alertMessages {
-      height: 18vh; } }
+      height: 13vh;
+      width: 50vh;
+      margin: auto; } }
+  @media (min-width: 1280px) {
+    .alertMessages {
+      height: 18vh;
+      width: 70vh; } }
 
 .alertMessagesLeft {
   display: flex;
@@ -477,8 +483,7 @@ body {
   -moz-align-items: center;
   justify-content: flex-start;
   -moz-justify-content: flex-start;
-  width: 80%;
-  overflow-y: scroll; }
+  width: 80%; }
   @media (min-width: 768px) {
     .alertMessagesLeft {
       justify-content: space-around;
@@ -486,7 +491,7 @@ body {
       width: 73%; } }
   @media (min-width: 1024px) {
     .alertMessagesLeft {
-      width: 43%; } }
+      width: 83%; } }
 
 #friend, #group, #password {
   height: 2.5em;
