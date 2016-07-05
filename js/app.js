@@ -11685,7 +11685,7 @@ $("#submitButton").click(function (event) {
 });
 
 
-var closeX2 = ('<p class="closeX"> X </p>');
+var closeX2 = ('<p class="closeX2"> X </p>');
 /* Show message that confirms settings for message user form have been reset */
 $("#cancelButton").click(function (event) {
 

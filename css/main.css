@@ -1115,11 +1115,11 @@ textarea:focus, #timezone:focus {
     .closeX {
       margin-top: -5em; } }
 
-.closeX {
+.closeX2 {
   margin-top: -4.375em;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .closeX {
+    .closeX2 {
       margin-top: -7.5em; } }
 
 #sentMessageText {
