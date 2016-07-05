@@ -74,3 +74,13 @@ fill: #2D3339;
 
 }
 }
+
+$bounce-color: darken($medium-purple, 20%);
+
+@keyframes bounceOut {
+        0%{ box-shadow: 0 0 0 2.5px $bounce-color; opacity:1;}
+        25%{ box-shadow: 0 0 0 1px $bounce-color; opacity:1;}
+        50%{ box-shadow: 0 0 0 3px $bounce-color; opacity:1; }
+        75%{ box-shadow: 0 0 0 2.5px $bounce-color; opacity:1;}
+        100%{ box-shadow: 0 0 0 3px $bounce-color; opacity:1;}
+}

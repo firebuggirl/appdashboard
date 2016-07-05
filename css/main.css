@@ -453,7 +453,8 @@ body {
   margin-left: 5%;
   margin-bottom: 5%;
   width: 90%;
-  height: 15vh;
+  height: 20vh;
+  border-radius: 0.5em;
   border: 10px solid #453b94;
   opacity: 0.7;
   border-radius: 4%; }
@@ -463,7 +464,11 @@ body {
     .alertMessages {
       width: 80%;
       margin-left: 10%;
+      height: 12vh;
       font-size: 24px; } }
+  @media (min-width: 1024px) {
+    .alertMessages {
+      height: 18vh; } }
 
 .alertMessagesLeft {
   display: flex;
@@ -472,7 +477,8 @@ body {
   -moz-align-items: center;
   justify-content: flex-start;
   -moz-justify-content: flex-start;
-  width: 80%; }
+  width: 80%;
+  overflow-y: scroll; }
   @media (min-width: 768px) {
     .alertMessagesLeft {
       justify-content: space-around;
@@ -800,6 +806,9 @@ button {
   @media (min-width: 1280px) {
     .innerFlexWrap {
       width: 30%; } }
+  .innerFlexWrap:hover {
+    background-color: #71c571;
+    border-color: #453b94; }
 
 .socialIconDivs {
   display: flex;
@@ -822,6 +831,9 @@ button {
     .socialIconDivs {
       margin-right: 0em;
       margin-left: 1.25em; } }
+  .socialIconDivs:hover {
+    background-color: #453b94;
+    border: #545454; }
 
 #twitter, #facebook, #google, #linkedIn, #pinterest, #youtube {
   height: 3.4375em;
@@ -871,9 +883,14 @@ h4 {
       margin-left: 0%;
       width: 50%; } }
 
+table tr:hover {
+  background-color: #dfddf1; }
+
 .arrow {
   height: 40px;
   fill: #796FC6; }
+  .arrow:hover {
+    fill: #453b94; }
 
 tr.flexArrows:nth-child(4) {
   border-bottom: 0px; }
@@ -901,7 +918,12 @@ tr {
 .memberPics {
   height: 3.75em;
   border-radius: 50%;
-  border: 4px solid #796FC6; }
+  border: 4px solid #796FC6;
+  opacity: 0.8; }
+  .memberPics:hover {
+    cursor: pointer;
+    animation: bounceOut .8s linear;
+    opacity: 1; }
 
 #commentSvg, #like, #joinedGroup, #online {
   width: 1.875em;
@@ -917,6 +939,8 @@ tr {
       width: 2.5em;
       margin-left: 0.625em;
       margin-top: -0.625em; } }
+  #commentSvg:hover, #like:hover, #joinedGroup:hover, #online:hover {
+    fill: #4cb74c; }
 
 #lastWrapperDiv {
   display: flex;
@@ -1106,6 +1130,7 @@ textarea:focus, #timezone:focus {
   width: 100%;
   height: 100vh;
   position: fixed;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   display: none;
@@ -1131,7 +1156,7 @@ textarea:focus, #timezone:focus {
       width: 400px; } }
   @media (min-width: 1024px) {
     #messageSent {
-      margin-top: -12.5em; } }
+      margin-top: -6.25em; } }
 
 .closeX {
   margin-top: -3.125em;
@@ -1293,6 +1318,22 @@ Keyframes
 @keyframes fill-hover {
   100% {
     fill: #2D3339; } }
+@keyframes bounceOut {
+  0% {
+    box-shadow: 0 0 0 2.5px #453b94;
+    opacity: 1; }
+  25% {
+    box-shadow: 0 0 0 1px #453b94;
+    opacity: 1; }
+  50% {
+    box-shadow: 0 0 0 3px #453b94;
+    opacity: 1; }
+  75% {
+    box-shadow: 0 0 0 2.5px #453b94;
+    opacity: 1; }
+  100% {
+    box-shadow: 0 0 0 3px #453b94;
+    opacity: 1; } }
 /*@import "media/index";*/
 
 /*# sourceMappingURL=main.css.map */
