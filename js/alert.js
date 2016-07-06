@@ -26,7 +26,7 @@
 $(document).ready(function(){
       if(window.innerWidth <= 750){
 $('.trafficTitlesMobileView').show();
-      //  $('.trafficTitlesTabletView').hide();
+
 
       }
     });

@@ -36,6 +36,6 @@ Javascripot notes:
 
 - bellclick.js  Displays new messages on bell click event
 
-- alert.js  Pop up that alerts user that there are unread messages in app inbox
+- alert.js  Pop up that alerts user that there are unread messages in app inbox + adds class ".selected" to buttons in Traffic table
 
 - app.js file contains all of the JS files in this project that have been pipe to app.js via gulpfile.js.

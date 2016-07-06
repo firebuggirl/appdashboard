@@ -11780,7 +11780,6 @@ loadSettings();
     });
 
     $('button').click(function(){
-      /*$('button').addClass("selected");*/
       $('button').removeClass('selected');
       $(this).closest('button').addClass('selected');
     });
@@ -11792,7 +11791,7 @@ loadSettings();
 $(document).ready(function(){
       if(window.innerWidth <= 750){
 $('.trafficTitlesMobileView').show();
-      //  $('.trafficTitlesTabletView').hide();
+
 
       }
     });
