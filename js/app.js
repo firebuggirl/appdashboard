@@ -11518,6 +11518,7 @@ var message3 = document.getElementById('alertMessage3');
 var messageText = document.getElementById('messagesText');
 
 
+
   bell.addEventListener("click", function(e){
     if(messages.style.display = 'none'){
       messages.style.display = 'block';
@@ -11548,7 +11549,7 @@ var messageText = document.getElementById('messagesText');
   if(message1.style.display === 'none' && message2.style.display === 'none' && message3.style.display === 'none'){
     messages.style.display = 'none';
     messageText.innerHTML = "There are no new messages in your inbox.";
-  
+
 
   }
 
@@ -11776,6 +11777,12 @@ loadSettings();
 
 
 
+    });
+
+    $('button').click(function(){
+      /*$('button').addClass("selected");*/
+      $('button').removeClass('selected');
+      $(this).closest('button').addClass('selected');
     });
 
 

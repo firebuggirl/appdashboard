@@ -710,13 +710,18 @@ input[type="search"]:focus {
   border-radius: 30%; }
 
 button {
-  border-radius: 40%;
+  border-radius: 1.25em;
   height: 2.5em;
+  width: 3.75em;
   background-color: transparent;
   border: none; }
   button:hover {
-    background-color: #3C943C;
+    background-color: #71c571;
     color: #fff; }
+
+.selected {
+  color: #fff;
+  background: #3C943C; }
 
 #chart {
   margin-top: 6.25em; }

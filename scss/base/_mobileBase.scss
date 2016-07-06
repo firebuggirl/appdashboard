@@ -372,15 +372,22 @@ input[type="search"]:focus {
 }
 
 button{
-	border-radius: 40%;
+	border-radius: em(20px);
 	height: em(40px);
+  width: em(60px);
 	background-color: transparent;
 	border: none;
   &:hover{
-    background-color: $limeGreen;
+    background-color: lighten($limeGreen, 20%);
     color: $white;
   }
 }
+
+.selected {
+	color: $white;
+	background: $limeGreen;
+}
+
 
 #chart{
   margin-top: em(100px);

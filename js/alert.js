@@ -14,6 +14,11 @@
 
     });
 
+    $('button').click(function(){
+      $('button').removeClass('selected');
+      $(this).closest('button').addClass('selected');
+    });
+
 
 
 
