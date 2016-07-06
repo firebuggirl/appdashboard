@@ -684,7 +684,7 @@ input[type="search"] {
       width: 83%; } }
   @media (min-width: 1280px) {
     input[type="search"] {
-      width: 87%; } }
+      width: 84%; } }
   input[type="search"]:hover {
     background-color: #574ab8; }
 

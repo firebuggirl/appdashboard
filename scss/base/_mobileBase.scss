@@ -337,7 +337,7 @@ input[type="search"] {
     width: 83%;
   }
   @include bp(large_screen){
-    width: 87%;
+    width: 84%;
   }
   &:hover{
     background-color: darken($medium-purple, 10%);
