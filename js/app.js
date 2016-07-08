@@ -1452,9 +1452,8 @@ $(function(){
   $('#searchMessages').autocomplete({
     lookup: names,
     onSelect: function (suggestion) {
-
-     //$('#outputcontent').html(thehtml);
-        var thehtml = suggestion.value + suggestion.data;
+    source: names;
+    
     }
   });
 
@@ -11517,7 +11516,7 @@ var message2 = document.getElementById('alertMessage2');
 var message3 = document.getElementById('alertMessage3');
 var messageText = document.getElementById('messagesText');
 
-
+messageText.style.color = "white";
 
   bell.addEventListener("click", function(e){
     if(messages.style.display = 'none'){
@@ -11530,7 +11529,7 @@ var messageText = document.getElementById('messagesText');
 
  alertMessage1.addEventListener("click", function(e){
      message1.style.display = 'none';
-    messages.style.display = 'none';
+     messages.style.display = 'none';
  });
 
  alertMessage2.addEventListener("click", function(e){
@@ -11555,12 +11554,12 @@ var messageText = document.getElementById('messagesText');
 
 });
 
-
-
 /* Note: messageUserValidate is the ID of the form element and "searchMessages" & "comment" IDs are for the input fields in the Message User Form*/
 
 var emailError,
-    nameError;
+    nameError,
+    popup,
+    popup2;
 
 document.getElementById("messageUserValidate").onsubmit = function () {
     var x = document.forms.messageUserValidate.searchMessages.value;
@@ -11569,14 +11568,16 @@ document.getElementById("messageUserValidate").onsubmit = function () {
     var submit = true;
 
     if (x === null || x === "") {
-        nameError = "Please enter the name of the user that you would like to connect with!";
-        document.getElementById("user_error").innerHTML = nameError;
+        nameError = "Please enter user!";
+        document.getElementById("innerHTML1").innerHTML = nameError;
+          document.getElementById("popup").style.display = "block";
         submit = false;
     }
 
     if (y === null || y === "") {
-        emailError = "Please enter your message!";
-        document.getElementById("message_error").innerHTML = emailError;
+        emailError = "Please enter message!";
+        document.getElementById("innerHTML2").innerHTML = emailError;
+          document.getElementById("popup2").style.display = "block";
         submit = false;
     }
 
@@ -11586,16 +11587,21 @@ document.getElementById("messageUserValidate").onsubmit = function () {
 
 };
 
-function removeWarning() {
-    document.getElementById(this.id + "_error").innerHTML = "";
+function removeWarning1() {
+  //  document.getElementById(this.id + "_error").innerHTML = "";
+      document.getElementById("popup").style.display = "none";
+
 }
 
-document.getElementById("searchMessages").onkeyup = removeWarning;
-document.getElementById("comment").onkeyup = removeWarning;
+function removeWarning2() {
+  //  document.getElementById(this.id + "_error").innerHTML = "";
+      document.getElementById("popup2").style.display = "none";
+}
+
+document.getElementById("searchMessages").onkeyup = removeWarning1;
+document.getElementById("comment").onkeyup = removeWarning2;
 ////
 /////////
-
-
 
 /* Hide overlay on page load */
 $(document).ready(function () {

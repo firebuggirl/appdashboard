@@ -7,7 +7,7 @@ var message2 = document.getElementById('alertMessage2');
 var message3 = document.getElementById('alertMessage3');
 var messageText = document.getElementById('messagesText');
 
-
+messageText.style.color = "white";
 
   bell.addEventListener("click", function(e){
     if(messages.style.display = 'none'){
@@ -20,7 +20,7 @@ var messageText = document.getElementById('messagesText');
 
  alertMessage1.addEventListener("click", function(e){
      message1.style.display = 'none';
-    messages.style.display = 'none';
+     messages.style.display = 'none';
  });
 
  alertMessage2.addEventListener("click", function(e){

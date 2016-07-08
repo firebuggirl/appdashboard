@@ -14,9 +14,8 @@ $(function(){
   $('#searchMessages').autocomplete({
     lookup: names,
     onSelect: function (suggestion) {
-
-     //$('#outputcontent').html(thehtml);
-        var thehtml = suggestion.value + suggestion.data;
+    source: names;
+    
     }
   });
 

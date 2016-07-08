@@ -25,9 +25,7 @@ body {
   }
 
 }
-#messagesText{
 
-}
 #messages{
   @include flex;
   @include flex_column;
@@ -57,9 +55,9 @@ body {
   color:$red;
   font-size: $font_size__large;
   margin-left: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
   width: 90%;
-  height: 13vh;
+  height: 100px;
   border-radius: em(8px);
   border: 10px solid darken($medium-purple, 20%);
   opacity: 0.7;
@@ -67,17 +65,21 @@ body {
   &:hover{
     opacity: 1;
   }
+  @include bp(mobile){
+    margin-bottom: 3%;
+  }
   @include bp(tablet){
     width: 80%;
     margin-left: 10%;
-    height: 12vh;
+    height: 120px;
     font-size: $font_size__h4;
   }
   @include bp(fullscreen){
-    height: 13vh;
-    width: 50vh;
+   width: 50vh;
    margin: auto;
 
+	 height: 100px;
+   margin-bottom:20px;
   }
   @include bp(large_screen){
     height: 18vh;
@@ -730,6 +732,24 @@ legend{
 
 }
 
+.autocomplete-suggestion{
+  @include flex;
+  @include flex_align_items--center;
+  background-color: darken($medium-purple, 20%);
+  color: $white;
+  height: 40px;
+  border-radius: em(8px);
+  border-bottom: 3px solid $white;
+  cursor: pointer;
+  width: 51%;
+  @include bp(tablet){
+    width: 64%;
+  }
+  @include bp(fullscreen){
+    width: 100%;
+  }
+}
+
 textarea{
   @include flex;
   height: 150px;
@@ -791,10 +811,10 @@ textarea:focus, #timezone:focus {
 
 
 #settingsFieldset1 > legend:nth-child(1){
-    margin-top: em(-40px);
+    margin-top: em(40px);
     margin-bottom: em(0px);
     @include bp(tablet){
-      margin-top: em(-10px);
+      margin-top: em(-5px);
     }
 }
 
@@ -826,7 +846,8 @@ textarea:focus, #timezone:focus {
   margin-top: em(45px);
   margin-bottom: em(58px);
   @include bp(tablet){
-      margin-bottom: em(63px);
+      margin-bottom: em(43px);
+      margin-top: em(25px);
   }
 }
 
@@ -945,4 +966,125 @@ textarea:focus, #timezone:focus {
   height: 100px;
   background-color: $white;
   border: 3px solid $medium-purple;
+}
+
+
+#popup
+{
+display:none;
+position: absolute;
+/*bottom:-110vh;*/
+z-index:10;
+width: 90%;
+height: em(30px);
+right: 5%;
+box-shadow: 1px 1px 5px #000;
+background-color:$limeGreen;
+color: $ivory;
+-khtml-opacity:1;
+-moz-opacity : 1;
+-ms-filter: "alpha(opacity=0)";
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+filter : alpha(opacity=0);
+padding:20px;
+border-style:solid;
+border-radius:15px;
+border-color:#bbd8b3;
+transition:all 1s;
+-webkit-transition:all 1s;
+@include bp(tablet){
+  width: 30%;
+  right: 30%;
+  height: em(100px);
+}
+
+
+}
+/*#popup{
+margin: 30px auto;
+  position: absolute;
+  width: 90%;
+  height: 100px;
+  right: 5%;
+  background: #4d4d72;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px #000;
+  z-index: 10000; }
+  @media (min-width: 768px) {
+    .message-sent-box,
+    .settings-saved-box {
+      width: 30%;
+      right: 30%; } }
+
+.settings-saved-box {
+  margin-top: 400px; }
+  @media (min-width: 768px) {
+    .settings-saved-box {
+      margin-top: 0; } }*/
+
+#popup2{
+  display:none;
+  position: absolute;
+  margin-top: em(50px);
+  /*bottom:-110vh;*/
+  z-index:10;
+  width: 90%;
+  height: em(30px);
+  right: 5%;
+  box-shadow: 1px 1px 5px #000;
+  background-color:$limeGreen;
+  color: $ivory;
+  -khtml-opacity:1;
+  -moz-opacity : 1;
+  -ms-filter: "alpha(opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  filter : alpha(opacity=0);
+  padding:20px;
+  border-style:solid;
+  border-radius:15px;
+  border-color:#bbd8b3;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+  @include bp(tablet){
+    width: 30%;
+    right: 30%;
+    height: em(100px);
+    margin-top: em(100px);
+  }
+
+
+  @include bp(fullscreen){
+  /*  left:50vw;
+    width:45vw;
+    height: 100px;*/
+  }
+}
+
+#popup:target, #popup2:target
+{
+-khtml-opacity:1;
+-moz-opacity : 1;
+-ms-filter: "alpha(opacity=100)";
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+filter : alpha(opacity=100);
+opacity : 1;
+}
+
+#innerHTML1{
+  margin-top: 0px;
+  font-size: $font_size__h5;
+  margin-top: em(-8px);
+  @include bp(tablet){
+    margin-top: em(3px);
+  }
+}
+
+#innerHTML2{
+  margin-top: 10px;
+  font-size: $font_size__h5;
+  margin-top: em(-8px);
+  @include bp(tablet){
+    margin-top: em(3px);
+  }
+
 }

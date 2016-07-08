@@ -14,15 +14,16 @@
     <header>
           <div id="cornerNavIcon">
             <a href="#"><img id="toggle" src="img/toggle.svg" alt="" /><span id="navTextIndent">Toggle Navigation</span></a>
-            <h1 id="headerH1"><span id="headerH1Span">Your</span>App&#0153; </h1>
+            <h1 id="headerH1"><span id="headerH1Span">Your</span>App&trade; </h1>
           </div>
 
 
 
             <nav id="headerNav">
-            <span><a href="#"><img id="bell" class="navIcons" src="img/icon-bell.svg" alt="" /></a>
+            <span><a href="#"><img id="bell" class="navIcons" src="img/icon-bell.svg" alt="messages" /></a>
             <a href="#"><img class="navIcons" id="dot" src="img/dot.png" alt="" /></a></span>
-            <a href="#"><img class="navIcons" id="profileImg" src="img/profile.jpg" alt="Juliette Tworsey" /></a>
+
+            <a href="#"><img class="navIcons" id="profileImg" src="img/profile.jpg" alt="profile image"  /></a>
             <p id="name">Juliette Tworsey</p>
           </nav>
 
@@ -54,7 +55,7 @@
 
 
             <div id="messages">
-               <h1 id="messagesText">New Messages!</h1>
+               <h3 id="messagesText">Alerts!</h3>
                 <div class="alertMessages" id="alertMessage1">
                <span class="alertMessagesLeft">You have a new friend request!
 
@@ -379,7 +380,7 @@
                 <td>
                   <svg class="arrow"  viewbox="0 0 10.5 16" style="enable-background:new 0 0 10.5 16;" xml:space="preserve" x="0px" y="0px" overflow="visible">
                   <g>
-                  <polygon i:knockout="Off" points="2.5,0 0,2.5 5.5,8 0,13.5 2.5,16 10.5,8 ">
+                  <polygon  points="2.5,0 0,2.5 5.5,8 0,13.5 2.5,16 10.5,8 ">
                   </polygon>
                   </g>
                  </svg>
@@ -413,7 +414,7 @@
                 <td>
                   <svg class="arrow"  viewbox="0 0 10.5 16" style="enable-background:new 0 0 10.5 16;" xml:space="preserve" x="0px" y="0px" overflow="visible">
                   <g>
-                  <polygon i:knockout="Off" points="2.5,0 0,2.5 5.5,8 0,13.5 2.5,16 10.5,8 ">
+                  <polygon  points="2.5,0 0,2.5 5.5,8 0,13.5 2.5,16 10.5,8 ">
                   </polygon>
                   </g>
                  </svg>
@@ -443,7 +444,7 @@
                 <td>
                   <svg class="arrow"  viewbox="0 0 10.5 16" style="enable-background:new 0 0 10.5 16;" xml:space="preserve" x="0px" y="0px" overflow="visible">
                   <g>
-                  <polygon i:knockout="Off" points="2.5,0 0,2.5 5.5,8 0,13.5 2.5,16 10.5,8 ">
+                  <polygon  points="2.5,0 0,2.5 5.5,8 0,13.5 2.5,16 10.5,8 ">
                   </polygon>
                   </g>
                  </svg>
@@ -470,7 +471,7 @@
                 <td>
                   <svg class="arrow"  viewbox="0 0 10.5 16" style="enable-background:new 0 0 10.5 16;" xml:space="preserve" x="0px" y="0px" overflow="visible">
                   <g>
-                  <polygon i:knockout="Off" points="2.5,0 0,2.5 5.5,8 0,13.5 2.5,16 10.5,8 ">
+                  <polygon  points="2.5,0 0,2.5 5.5,8 0,13.5 2.5,16 10.5,8 ">
                   </polygon>
                   </g>
                  </svg>
@@ -491,20 +492,39 @@
 
 <div id="lastWrapperDiv">
       <div id="messageUser">
+        <div id="popup" style="text-align:center;">
 
+
+          <h2 id="innerHTML1"></h2>
+
+
+
+             <br>
+            <br>
+       </div>
+       <div id="popup2" style="text-align:center;">
+
+
+           <h2 id="innerHTML2"></h2>
+
+
+            <br>
+           <br>
+      </div>
             <form id="messageUserValidate" action="index.html" method="GET" onsubmit="return checkForm(this);" >
 
               <fieldset class="form" id="messageFieldset">
               <legend>Message User</legend>
+
               <label for="searchMessages">
-               <input type="search" id="searchMessages" name="searchMessages" placeholder="Search for User" autocomplete="on" ><p class="error"><span id="user_error"></span></p>
-                </label>
+               <input type="search" id="searchMessages" name="searchMessages" placeholder="Search for User" autocomplete="on" >
+              </label>
               <label for="comment">
                <textarea id="comment" rows="6" cols="42" name="comment" placeholder="Message for User" ></textarea>
              </label>
-               <p class="error"><span id="message_error"></span></p>
 
            </fieldset>
+
 
 
             <fieldset class="form" id="signup">
@@ -574,7 +594,7 @@
                <label id="timeZoneLabel" for="timezone">Timezone</label><br>
 
                 <select name="timezone" id="timezone">
-                      <option value="Select Timezone" selected="selected">Select Timezone</option>
+                      <option value="Select Timezone">Select Timezone</option>
                       <option value="Hawaii">(GMT-10:00) Hawaii</option>
                       <option value="Alaska">(GMT-09:00) Alaska</option>
                       <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>

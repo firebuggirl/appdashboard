@@ -1,5 +1,3 @@
-
-
 /* Hide overlay on page load */
 $(document).ready(function () {
   $overlay.hide();
