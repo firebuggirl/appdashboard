@@ -666,6 +666,12 @@ h3 {
   h3:hover {
     opacity: 1; }
 
+@media (min-width: 768px) {
+  #trafficH3 {
+    margin-bottom: -1.5625em;
+    margin-left: 0.625em;
+    font-size: 26px; } }
+
 #socialStatsH3 {
   padding-top: 1.5625em; }
 
@@ -700,6 +706,9 @@ input[type="search"]:focus {
 #weekly {
   padding-top: 1.25em;
   text-align: center; }
+  @media (min-width: 768px) {
+    #weekly {
+      text-align: left; } }
 
 #trafficTime {
   display: flex;
@@ -707,6 +716,10 @@ input[type="search"]:focus {
   justify-content: space-between;
   -webkit-justify-content: space-between;
   padding-bottom: 1.25em; }
+  @media (min-width: 768px) {
+    #trafficTime {
+      justify-content: flex-end;
+      -moz-justify-content: flex-end; } }
 
 .trafficTimeHover:hover {
   color: #fff;
@@ -722,6 +735,10 @@ button {
   button:hover {
     background-color: #71c571;
     color: #fff; }
+  @media (min-width: 768px) {
+    button {
+      margin-right: 0.9375em;
+      font-size: 24px; } }
 
 .selected {
   color: #fff;
@@ -1371,7 +1388,7 @@ header {
       justify-content: space-around;
       -webkit-justify-content: space-around;
       margin-left: auto;
-      width: 16.25em; } }
+      width: 18.125em; } }
 
 #dot {
   height: 8px;
@@ -1379,12 +1396,20 @@ header {
   margin-bottom: 1.875em; }
 
 #line {
-  height: 8px; }
+  display: none;
+  font-size: 33px;
+  font-weight: 100;
+  margin-top: -0.25em; }
+  @media (min-width: 768px) {
+    #line {
+      display: flex;
+      -moz-display: flex;
+      margin-top: 0.125em; } }
 
 #profileImg {
   border-radius: 50%;
-  height: 2.5em;
-  width: 2.5em; }
+  height: 40px;
+  width: 40px; }
 
 /*@import "footer";*/
 /* --------------------------

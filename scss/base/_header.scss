@@ -67,7 +67,7 @@ header {
     @include flex;
     @include flex_justify_space_around;
     margin-left: auto;
-    width: em(260px);
+    width: em(290px);
 
   }
 }
@@ -81,15 +81,20 @@ header {
 
 
 #line{
-   height: 8px;
+   display:none;
+   font-size: 33px;
+   font-weight: $font-weight--thin;
+   margin-top: em(-4px);
+   @include bp(tablet){
+   @include flex;
+   margin-top: em(2px);
+ }
  }
 
 
 #profileImg{
   border-radius: 50%;
-  height: em(40px);
-  width: em(40px);
-  @include bp(tablet){
+  height: 40px;
+  width: 40px;
 
-  }
 }

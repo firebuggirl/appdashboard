@@ -315,8 +315,17 @@ h3{
     opacity: 1;
   }
 
+
 }
 
+
+#trafficH3{
+  @include bp(tablet){
+    margin-bottom: em(-25px);
+    margin-left: em(10px);
+    font-size: $font_size__h3;
+  }
+}
 #socialStatsH3{
   padding-top: em(25px);
 
@@ -358,12 +367,19 @@ input[type="search"]:focus {
 #weekly{
   padding-top: em(20px);
   text-align: center;
+  @include bp(tablet){
+    text-align: left;
+  }
 }
 
 #trafficTime{
   @include flex;
   @include flex_justify_space_between;
   padding-bottom: em(20px);
+  @include bp(tablet){
+    @include flex_justify_end;
+
+  }
 
 }
 
@@ -382,6 +398,10 @@ button{
   &:hover{
     background-color: lighten($limeGreen, 20%);
     color: $white;
+  }
+  @include bp(tablet){
+    margin-right: em(15px);
+    font-size: $font_size__h4;
   }
 }
 
